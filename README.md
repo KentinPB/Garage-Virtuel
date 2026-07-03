@@ -15,6 +15,7 @@
 - [Utilisation](#-utilisation)
 - [Architecture](#-architecture)
 - [Guide de développement](#-guide-de-développement)
+- [Structure du code](#-structure-du-code)
 - [Roadmap - Plans futurs](#-roadmap---plans-futurs)
 - [Contribution](#-contribution)
 - [Licence](#licence)
@@ -278,6 +279,16 @@ localStorage.setItem('garage', JSON.stringify([
 - **Interface** : Fully francophone
 
 Pour changer de langue, voir les fichiers HTML (balises `lang`, textes dans le DOM, etc.)
+
+## 🧩 Structure du code
+
+Une explication détaillée de l’organisation du projet et de l’interaction entre les scripts est disponible dans [CODE_STRUCTURE.md](CODE_STRUCTURE.md).
+
+Elle couvre :
+- le rôle de chaque dossier et fichier
+- le fonctionnement du point d’entrée principal
+- le flux entre les modules UI, core et data
+- un exemple concret d’ajout ou de filtrage d’un véhicule
 
 ## 📚 Ressources pédagogiques
 
