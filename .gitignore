@@ -104,3 +104,6 @@ temp/
 *.backup
 *~
 *.swp
+
+# Ignore GitHub metadata kept locally
+.github/
