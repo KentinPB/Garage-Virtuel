@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation — Garage Virtuel</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/apprentissage.css">
+    <link rel="stylesheet" href="Styles/expr-s.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Garage Virtuel — Présentation du projet</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Présentation</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="Description">Garage Virtuel est un site statique pédagogique présentant des collections de voitures, des mini-projets et des démonstrations JavaScript sans dépendances externes.</p>
+      </section>
+
+      <section class="presentation">
+        <h2>À propos du projet</h2>
+        <p>Ce projet a pour objectif de proposer un terrain d'apprentissage pour le développement web : structure HTML simple, styles CSS clairs et logique JavaScript côté client pour la gestion d'un "garage" (CRUD minimal, persistance via <strong>localStorage</strong>).</p>
+      </section>
+
+      <section class="objectifs">
+        <h2>Objectifs</h2>
+        <ul>
+          <li>Fournir un exemple clair d'application front-end sans framework.</li>
+          <li>Montrer des patterns simples de manipulation du DOM et de persistance locale.</li>
+          <li>Servir de base pour des ateliers ou mini-projets éducatifs.</li>
+        </ul>
+      </section>
+
+      <section class="features">
+        <h2>Fonctionnalités clés</h2>
+        <ul>
+          <li>Affichage et filtrage des véhicules depuis des données locales.</li>
+          <li>Ajout / suppression d'éléments via des formulaires modulaires.</li>
+          <li>Persistance avec <code>localStorage</code> et initialisation automatique si vide.</li>
+        </ul>
+      </section>
+
+      <section class="tech">
+        <h2>Stack & structure</h2>
+        <p>HTML + CSS + JavaScript (vanilla). Principaux fichiers :</p>
+        <ul>
+          <li>Styles : <strong>Styles/style.css</strong>, <strong>Styles/garage.css</strong></li>
+          <li>Logique : <strong>Scripts/core/garage.js</strong>, <strong>Scripts/ui/garage-ui.js</strong>, <strong>Scripts/ui/forms.js</strong></li>
+          <li>Données exemples : <strong>Data/cars.json</strong></li>
+        </ul>
+      </section>
+
+      <section class="evolution">
+        <h2>Évolution future</h2>
+        <p>Perspectives d'évolution pour le projet :</p>
+        <ul>
+          <li>Ajout d'une base de données pour stocker durablement les véhicules (ex. SQLite, PostgreSQL, ou une solution cloud).</li>
+          <li>Gestion d'utilisateurs et authentification (inscription, connexion, rôles et permissions).</li>
+          <li>Développement d'une API backend pour synchronisation multi-utilisateurs et recherches avancées.</li>
+          <li>Import/export, sauvegardes et migrations de données pour fiabilité et portabilité.</li>
+          <li>Améliorations UX : tableaux de bord, filtres avancés et notifications en temps réel.</li>
+        </ul>
+      </section>
+
+      <section class="contribuer">
+        <h2>Contribuer</h2>
+        <p>Pour contribuer, créez une branche, modifiez les fichiers et proposez une pull request. Respectez la simplicité du dépôt : pas de dépendances externes ni de bundler.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>&copy; 2024 Garage Virtuel. Tous droits réservés.</strong></p>
+    </footer>
+
+  </body>
+</html>

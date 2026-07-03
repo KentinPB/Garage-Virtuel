@@ -1,0 +1,170 @@
+/* ============================================ */
+/* CONTACT PAGE - Formulaire Pro              */
+/* ============================================ */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ============================================ */
+/* FORM STYLING                               */
+/* ============================================ */
+
+#contactForm {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  background: linear-gradient(135deg, #1b1b1b 0%, #252525 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  border-left: 4px solid #e63946;
+}
+
+#contactForm h2 {
+  color: #e63946;
+  margin-top: 0;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+#contactForm label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #f0f0f0;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: rgba(37, 37, 37, 0.8);
+  color: #f0f0f0;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: #909090;
+}
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #e63946;
+  box-shadow: 0 0 8px rgba(230, 57, 70, 0.3);
+  background-color: rgba(37, 37, 37, 0.95);
+}
+
+#contactForm textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+/* ============================================ */
+/* BUTTONS SUBMIT                             */
+/* ============================================ */
+
+#contactForm button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px 20px;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: #d62828;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+}
+
+#contactForm button:active {
+  transform: translateY(0);
+}
+
+/* ============================================ */
+/* VALIDATION MESSAGES                        */
+/* ============================================ */
+
+.error-message {
+  color: #e63946;
+  font-size: 0.85em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: rgba(46, 125, 50, 0.2);
+  color: #66bb6a;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #66bb6a;
+  margin-bottom: 20px;
+}
+
+/* ============================================ */
+/* RESPONSIVE                                 */
+/* ============================================ */
+
+@media (max-width: 768px) {
+  #contactForm {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+
+  #contactForm h2 {
+    font-size: 1.6em;
+  }
+
+  #contactForm label {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px 15px;
+  }
+
+  #contactForm {
+    padding: 25px 20px;
+    border-left-width: 3px;
+  }
+
+  #contactForm h2 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+
+  #contactForm input,
+  #contactForm select,
+  #contactForm textarea {
+    font-size: 16px; /* Évite zoom automatique sur mobile */
+    padding: 12px 12px;
+  }
+
+  #contactForm button {
+    padding: 13px 15px;
+    font-size: 0.95em;
+  }
+}

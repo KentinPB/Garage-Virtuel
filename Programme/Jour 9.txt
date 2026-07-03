@@ -1,0 +1,267 @@
+<<<<<<< HEAD
+🎯 Objectifs du jour
+
+À la fin de cette séance, tu sauras :
+
+Créer une fonction en JavaScript (avec ou sans paramètres).
+
+Appeler une fonction pour exécuter un bloc de code précis.
+
+Utiliser des paramètres pour rendre ton code flexible.
+
+Retourner une valeur avec return.
+
+Comprendre la portée (scope) d’une variable (locale vs globale).
+
+Créer une petite fonction utile pour ton garage virtuel.
+
+🧩 1. Qu’est-ce qu’une fonction ?
+
+Une fonction est un bloc de code réutilisable qui accomplit une tâche précise.
+Tu la définis une fois, et tu peux ensuite l’appeler plusieurs fois dans ton programme.
+
+C’est comme une macro mécanique : au lieu de répéter les mêmes gestes sur chaque voiture, tu appuies sur un bouton, et tout se fait automatiquement.
+
+Exemple de base
+function saluer() {
+  console.log("Bienvenue dans le garage !");
+}
+
+
+Ici :
+
+function → mot-clé pour créer une fonction.
+
+saluer → nom de la fonction.
+
+{ ... } → contient les instructions à exécuter.
+
+Appel de la fonction :
+
+saluer(); // Affichera : Bienvenue dans le garage !
+
+🔧 2. Les fonctions avec paramètres
+
+Une fonction peut recevoir des paramètres (des valeurs à utiliser à l’intérieur du code).
+
+function afficherVoiture(modele, puissance) {
+  console.log("Modèle : " + modele + ", Puissance : " + puissance + " ch");
+}
+
+
+Appel :
+
+afficherVoiture("Mazda RX-7", 276);
+afficherVoiture("Toyota Supra", 320);
+
+
+Tu remarqueras que le même code s’adapte à n’importe quelle voiture :
+le même moteur logique, différents réservoirs de données.
+
+⚙️ 3. Le mot-clé return
+
+Une fonction peut renvoyer un résultat grâce à return.
+
+function addition(a, b) {
+  return a + b;
+}
+
+let resultat = addition(5, 3);
+console.log(resultat); // 8
+
+
+Ici, la fonction calcule une valeur, mais ne l’affiche pas directement — elle la renvoie pour qu’on puisse la réutiliser plus tard.
+
+🧠 4. Portée des variables (scope)
+
+Il existe deux types de variables :
+
+Globales → accessibles partout dans ton script.
+
+Locales → accessibles seulement dans la fonction où elles sont créées.
+
+Exemple :
+
+let message = "Garage ouvert"; // variable globale
+
+function afficherMessage() {
+  let message = "Révision en cours"; // variable locale
+  console.log(message);
+}
+
+afficherMessage();  // Révision en cours
+console.log(message); // Garage ouvert
+
+
+Deux variables portent le même nom, mais n’existent pas dans le même “univers”.
+
+🧰 5. Application – Ton garage virtuel
+
+Créons une fonction pour ajouter une voiture plus proprement.
+On va déplacer le code d’ajout dans une fonction personnalisée :
+
+function ajouterVoiture(nom, puissance) {
+  let nouvelle = document.createElement("div");
+  nouvelle.classList.add("voiture");
+  nouvelle.textContent = nom + " – " + puissance + " ch 🚗";
+  document.querySelector(".garage-container").appendChild(nouvelle);
+}
+
+let bouton = document.getElementById("ajouter");
+
+bouton.addEventListener("click", () => {
+  ajouterVoiture("Mazda RX-7", 276);
+});
+
+
+Résultat : ton code est plus propre, plus facile à relire, et surtout, tu peux réutiliser la fonction n’importe où.
+
+💡 Mini-exercice
+
+Crée une fonction calculerPuissanceFiscal(ch) qui :
+
+prend la puissance réelle (en chevaux) d’une voiture ;
+
+renvoie la puissance fiscale estimée en divisant par 15 (arrondi à l’entier le plus proche) ;
+
+affiche ensuite la phrase :
+"La puissance fiscale est de X CV fiscaux."
+
+Exemple :
+
+calculerPuissanceFiscal(276);
+// → La puissance fiscale est de 18 CV fiscaux.
+=======
+🎯 Objectifs du jour
+
+À la fin de cette séance, tu sauras :
+
+Créer une fonction en JavaScript (avec ou sans paramètres).
+
+Appeler une fonction pour exécuter un bloc de code précis.
+
+Utiliser des paramètres pour rendre ton code flexible.
+
+Retourner une valeur avec return.
+
+Comprendre la portée (scope) d’une variable (locale vs globale).
+
+Créer une petite fonction utile pour ton garage virtuel.
+
+🧩 1. Qu’est-ce qu’une fonction ?
+
+Une fonction est un bloc de code réutilisable qui accomplit une tâche précise.
+Tu la définis une fois, et tu peux ensuite l’appeler plusieurs fois dans ton programme.
+
+C’est comme une macro mécanique : au lieu de répéter les mêmes gestes sur chaque voiture, tu appuies sur un bouton, et tout se fait automatiquement.
+
+Exemple de base
+function saluer() {
+  console.log("Bienvenue dans le garage !");
+}
+
+
+Ici :
+
+function → mot-clé pour créer une fonction.
+
+saluer → nom de la fonction.
+
+{ ... } → contient les instructions à exécuter.
+
+Appel de la fonction :
+
+saluer(); // Affichera : Bienvenue dans le garage !
+
+🔧 2. Les fonctions avec paramètres
+
+Une fonction peut recevoir des paramètres (des valeurs à utiliser à l’intérieur du code).
+
+function afficherVoiture(modele, puissance) {
+  console.log("Modèle : " + modele + ", Puissance : " + puissance + " ch");
+}
+
+
+Appel :
+
+afficherVoiture("Mazda RX-7", 276);
+afficherVoiture("Toyota Supra", 320);
+
+
+Tu remarqueras que le même code s’adapte à n’importe quelle voiture :
+le même moteur logique, différents réservoirs de données.
+
+⚙️ 3. Le mot-clé return
+
+Une fonction peut renvoyer un résultat grâce à return.
+
+function addition(a, b) {
+  return a + b;
+}
+
+let resultat = addition(5, 3);
+console.log(resultat); // 8
+
+
+Ici, la fonction calcule une valeur, mais ne l’affiche pas directement — elle la renvoie pour qu’on puisse la réutiliser plus tard.
+
+🧠 4. Portée des variables (scope)
+
+Il existe deux types de variables :
+
+Globales → accessibles partout dans ton script.
+
+Locales → accessibles seulement dans la fonction où elles sont créées.
+
+Exemple :
+
+let message = "Garage ouvert"; // variable globale
+
+function afficherMessage() {
+  let message = "Révision en cours"; // variable locale
+  console.log(message);
+}
+
+afficherMessage();  // Révision en cours
+console.log(message); // Garage ouvert
+
+
+Deux variables portent le même nom, mais n’existent pas dans le même “univers”.
+
+🧰 5. Application – Ton garage virtuel
+
+Créons une fonction pour ajouter une voiture plus proprement.
+On va déplacer le code d’ajout dans une fonction personnalisée :
+
+function ajouterVoiture(nom, puissance) {
+  let nouvelle = document.createElement("div");
+  nouvelle.classList.add("voiture");
+  nouvelle.textContent = nom + " – " + puissance + " ch 🚗";
+  document.querySelector(".garage-container").appendChild(nouvelle);
+}
+
+let bouton = document.getElementById("ajouter");
+
+bouton.addEventListener("click", () => {
+  ajouterVoiture("Mazda RX-7", 276);
+});
+
+
+Résultat : ton code est plus propre, plus facile à relire, et surtout, tu peux réutiliser la fonction n’importe où.
+
+💡 Mini-exercice
+
+Crée une fonction calculerPuissanceFiscal(ch) qui :
+
+prend la puissance réelle (en chevaux) d’une voiture ;
+
+renvoie la puissance fiscale estimée en divisant par 15 (arrondi à l’entier le plus proche) ;
+
+affiche ensuite la phrase :
+"La puissance fiscale est de X CV fiscaux."
+
+Exemple :
+
+calculerPuissanceFiscal(276);
+// → La puissance fiscale est de 18 CV fiscaux.
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541

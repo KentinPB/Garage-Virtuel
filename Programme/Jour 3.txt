@@ -1,0 +1,266 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Découvrir le rôle et la syntaxe du CSS.
+
+Apprendre à lier une feuille de style à ton HTML.
+
+Appliquer les premiers styles : couleurs, polices, centrage, marges.
+
+Comprendre la différence entre les sélecteurs (balise, .class, #id).
+
+🧩 Étape 1 – Qu’est-ce que le CSS ?
+
+CSS (Cascading Style Sheets, ou “feuilles de style en cascade”) sert à séparer le contenu (HTML) de la présentation.
+
+HTML te dit quoi afficher, CSS te dit comment l’afficher.
+
+Exemple :
+
+<p>Bienvenue dans mon garage.</p>
+
+
+devient, avec CSS :
+
+p {
+  color: red;
+  font-size: 20px;
+}
+
+
+Résultat : le texte s’affiche en rouge et plus grand.
+(et tu n’as pas touché au HTML !)
+
+🧱 Étape 2 – Lier ton fichier CSS
+
+Dans ton dossier garage/, crée un sous-dossier styles/.
+
+À l’intérieur, crée un fichier nommé style.css.
+
+Dans ton fichier HTML principal (index.html), ajoute ce lien dans la balise <head> :
+
+<link rel="stylesheet" href="styles/style.css">
+
+
+Cela indique au navigateur d’appliquer le fichier CSS à la page.
+
+(Tu pourras copier cette ligne dans les autres pages aussi.)
+
+🎨 Étape 3 – Premiers styles
+
+Ouvre style.css et ajoute ces premières lignes :
+
+/* Style global du site */
+body {
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1, h2 {
+  text-align: center;
+  color: #e63946;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  background-color: #111;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e63946;
+  transition: color 0.3s;
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  background-color: #111;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+
+Sauvegarde et ouvre ta page dans ton navigateur :
+Tu devrais voir un fond sombre, des titres rouges, et une barre de navigation claire et lisible.
+
+🧠 Étape 4 – Comprendre les sélecteurs
+
+Les sélecteurs te permettent de dire au CSS quel élément viser.
+
+Balise : p { color: red; } → affecte tous les <p>.
+
+Classe (.nom) : .important { color: red; } → affecte les éléments ayant class="important".
+
+ID (#nom) : #accueil { color: red; } → affecte l’élément unique ayant id="accueil".
+
+👉 Exemple :
+
+<p class="important">Ceci est un message spécial.</p>
+
+.important {
+  color: gold;
+  font-style: italic;
+}
+
+🎯 Mission du jour
+
+Lier ta feuille de style à tes trois pages (index.html, projets.html, contact.html).
+
+Appliquer le style CSS fourni ci-dessus.
+
+Tester que les liens changent bien de couleur au survol.
+
+Facultatif :
+
+Change la couleur principale (#e63946) par celle de ton choix.
+
+=======
+🎯 Objectif du jour
+
+Découvrir le rôle et la syntaxe du CSS.
+
+Apprendre à lier une feuille de style à ton HTML.
+
+Appliquer les premiers styles : couleurs, polices, centrage, marges.
+
+Comprendre la différence entre les sélecteurs (balise, .class, #id).
+
+🧩 Étape 1 – Qu’est-ce que le CSS ?
+
+CSS (Cascading Style Sheets, ou “feuilles de style en cascade”) sert à séparer le contenu (HTML) de la présentation.
+
+HTML te dit quoi afficher, CSS te dit comment l’afficher.
+
+Exemple :
+
+<p>Bienvenue dans mon garage.</p>
+
+
+devient, avec CSS :
+
+p {
+  color: red;
+  font-size: 20px;
+}
+
+
+Résultat : le texte s’affiche en rouge et plus grand.
+(et tu n’as pas touché au HTML !)
+
+🧱 Étape 2 – Lier ton fichier CSS
+
+Dans ton dossier garage/, crée un sous-dossier styles/.
+
+À l’intérieur, crée un fichier nommé style.css.
+
+Dans ton fichier HTML principal (index.html), ajoute ce lien dans la balise <head> :
+
+<link rel="stylesheet" href="styles/style.css">
+
+
+Cela indique au navigateur d’appliquer le fichier CSS à la page.
+
+(Tu pourras copier cette ligne dans les autres pages aussi.)
+
+🎨 Étape 3 – Premiers styles
+
+Ouvre style.css et ajoute ces premières lignes :
+
+/* Style global du site */
+body {
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1, h2 {
+  text-align: center;
+  color: #e63946;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  background-color: #111;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e63946;
+  transition: color 0.3s;
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  background-color: #111;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+
+Sauvegarde et ouvre ta page dans ton navigateur :
+Tu devrais voir un fond sombre, des titres rouges, et une barre de navigation claire et lisible.
+
+🧠 Étape 4 – Comprendre les sélecteurs
+
+Les sélecteurs te permettent de dire au CSS quel élément viser.
+
+Balise : p { color: red; } → affecte tous les <p>.
+
+Classe (.nom) : .important { color: red; } → affecte les éléments ayant class="important".
+
+ID (#nom) : #accueil { color: red; } → affecte l’élément unique ayant id="accueil".
+
+👉 Exemple :
+
+<p class="important">Ceci est un message spécial.</p>
+
+.important {
+  color: gold;
+  font-style: italic;
+}
+
+🎯 Mission du jour
+
+Lier ta feuille de style à tes trois pages (index.html, projets.html, contact.html).
+
+Appliquer le style CSS fourni ci-dessus.
+
+Tester que les liens changent bien de couleur au survol.
+
+Facultatif :
+
+Change la couleur principale (#e63946) par celle de ton choix.
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Ajoute une autre police via Google Fonts (ex. Roboto, Poppins, Lato).

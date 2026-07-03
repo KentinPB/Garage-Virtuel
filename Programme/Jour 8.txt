@@ -1,0 +1,292 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Comprendre les conditions (le fameux if / else)
+
+Apprendre à utiliser les comparaisons et opérateurs logiques
+
+Découvrir les boucles (for, while, etc.)
+
+Appliquer tout ça dans un petit script concret
+
+🧠 Étape 1 – Les conditions : faire réfléchir ton code
+
+Une condition permet de dire :
+
+“Si quelque chose est vrai, fais ceci. Sinon, fais cela.”
+
+La structure de base :
+
+if (condition) {
+  // code exécuté si la condition est vraie
+} else {
+  // code exécuté si la condition est fausse
+}
+
+
+Exemple :
+
+let carburant = 30;
+
+if (carburant > 50) {
+  console.log("Le réservoir est plein !");
+} else {
+  console.log("Pense à faire le plein bientôt.");
+}
+
+⚙️ Les opérateurs de comparaison
+Symbole	Signification	Exemple
+==	égal à (valeur)	5 == "5" → vrai
+===	strictement égal (valeur + type)	5 === "5" → faux
+!=	différent	a != b
+< >	inférieur / supérieur	x > 10
+<= >=	inférieur ou égal / supérieur ou égal	x >= 100
+
+En JavaScript, on préfère === et !== pour éviter les surprises liées aux types.
+
+🧩 Exemple pratique
+let vitesse = 130;
+
+if (vitesse > 130) {
+  console.log("Tu roules trop vite !");
+} else if (vitesse === 130) {
+  console.log("Pile à la limite, conducteur modèle !");
+} else {
+  console.log("Tu peux encore accélérer un peu.");
+}
+
+🔀 Étape 2 – Les opérateurs logiques
+
+Tu peux combiner plusieurs conditions :
+
+let essence = 40;
+let moteurAllume = true;
+
+if (essence > 0 && moteurAllume) {
+  console.log("La voiture peut rouler !");
+} else {
+  console.log("Le moteur est éteint ou le réservoir est vide.");
+}
+
+Opérateur	Signification	Exemple
+&&	ET (toutes vraies)	(a > 0 && b < 5)
+`		`
+!	NON (inverse la valeur)	!(a > 5)
+🔁 Étape 3 – Les boucles : répéter intelligemment
+
+Une boucle sert à répéter une action plusieurs fois sans copier-coller ton code.
+
+🔹 Boucle for
+for (let i = 0; i < 5; i++) {
+  console.log("Tour de boucle numéro " + i);
+}
+
+
+→ Le code s’exécute 5 fois (i prend les valeurs 0, 1, 2, 3, 4).
+
+Explication :
+
+let i = 0; → point de départ
+
+i < 5; → condition pour continuer
+
+i++ → incrémente i à chaque tour
+
+🔹 Boucle while
+let compteur = 0;
+
+while (compteur < 3) {
+  console.log("Compteur : " + compteur);
+  compteur++;
+}
+
+
+→ Tant que la condition est vraie, la boucle continue.
+⚠️ Si tu oublies de modifier la variable (compteur++), elle tourne à l’infini !
+
+🧮 Étape 4 – Application pratique : le “garage dynamique”
+
+Tu vas ajouter une petite logique à ton bouton d’ajout de voiture :
+limiter le nombre de créations à 3.
+
+let bouton = document.getElementById("ajouter");
+let garage = document.querySelector(".garage-container");
+let compteur = 0; // compteur de voitures ajoutées
+
+bouton.addEventListener("click", () => {
+  if (compteur < 3) {
+    let nouvelle = document.createElement("div");
+    nouvelle.classList.add("voiture");
+    nouvelle.textContent = "Voiture ajoutée ! 🚗";
+    garage.appendChild(nouvelle);
+    compteur++;
+  } else {
+    alert("Garage complet ! Impossible d’ajouter plus de voitures.");
+  }
+});
+
+
+→ Le script vérifie la condition avant d’ajouter un nouvel élément.
+→ Grâce à la variable compteur, il garde en mémoire combien de fois tu as cliqué.
+
+Tu viens de combiner événement + condition + logique de contrôle.
+
+🧱 Étape 5 – Bonus : mini-exercice
+
+Essaie de créer un petit script qui affiche les nombres de 1 à 10 dans la console,
+puis affiche “Moteur chaud ! 🚗” à la fin.
+
+(indice : une simple boucle for suffit !)
+
+⚡ Résumé
+
+✅ Les conditions (if / else) permettent au code de réfléchir.
+✅ Les opérateurs logiques combinent plusieurs tests.
+✅ Les boucles permettent de répéter une action sans la recopier.
+=======
+🎯 Objectif du jour
+
+Comprendre les conditions (le fameux if / else)
+
+Apprendre à utiliser les comparaisons et opérateurs logiques
+
+Découvrir les boucles (for, while, etc.)
+
+Appliquer tout ça dans un petit script concret
+
+🧠 Étape 1 – Les conditions : faire réfléchir ton code
+
+Une condition permet de dire :
+
+“Si quelque chose est vrai, fais ceci. Sinon, fais cela.”
+
+La structure de base :
+
+if (condition) {
+  // code exécuté si la condition est vraie
+} else {
+  // code exécuté si la condition est fausse
+}
+
+
+Exemple :
+
+let carburant = 30;
+
+if (carburant > 50) {
+  console.log("Le réservoir est plein !");
+} else {
+  console.log("Pense à faire le plein bientôt.");
+}
+
+⚙️ Les opérateurs de comparaison
+Symbole	Signification	Exemple
+==	égal à (valeur)	5 == "5" → vrai
+===	strictement égal (valeur + type)	5 === "5" → faux
+!=	différent	a != b
+< >	inférieur / supérieur	x > 10
+<= >=	inférieur ou égal / supérieur ou égal	x >= 100
+
+En JavaScript, on préfère === et !== pour éviter les surprises liées aux types.
+
+🧩 Exemple pratique
+let vitesse = 130;
+
+if (vitesse > 130) {
+  console.log("Tu roules trop vite !");
+} else if (vitesse === 130) {
+  console.log("Pile à la limite, conducteur modèle !");
+} else {
+  console.log("Tu peux encore accélérer un peu.");
+}
+
+🔀 Étape 2 – Les opérateurs logiques
+
+Tu peux combiner plusieurs conditions :
+
+let essence = 40;
+let moteurAllume = true;
+
+if (essence > 0 && moteurAllume) {
+  console.log("La voiture peut rouler !");
+} else {
+  console.log("Le moteur est éteint ou le réservoir est vide.");
+}
+
+Opérateur	Signification	Exemple
+&&	ET (toutes vraies)	(a > 0 && b < 5)
+`		`
+!	NON (inverse la valeur)	!(a > 5)
+🔁 Étape 3 – Les boucles : répéter intelligemment
+
+Une boucle sert à répéter une action plusieurs fois sans copier-coller ton code.
+
+🔹 Boucle for
+for (let i = 0; i < 5; i++) {
+  console.log("Tour de boucle numéro " + i);
+}
+
+
+→ Le code s’exécute 5 fois (i prend les valeurs 0, 1, 2, 3, 4).
+
+Explication :
+
+let i = 0; → point de départ
+
+i < 5; → condition pour continuer
+
+i++ → incrémente i à chaque tour
+
+🔹 Boucle while
+let compteur = 0;
+
+while (compteur < 3) {
+  console.log("Compteur : " + compteur);
+  compteur++;
+}
+
+
+→ Tant que la condition est vraie, la boucle continue.
+⚠️ Si tu oublies de modifier la variable (compteur++), elle tourne à l’infini !
+
+🧮 Étape 4 – Application pratique : le “garage dynamique”
+
+Tu vas ajouter une petite logique à ton bouton d’ajout de voiture :
+limiter le nombre de créations à 3.
+
+let bouton = document.getElementById("ajouter");
+let garage = document.querySelector(".garage-container");
+let compteur = 0; // compteur de voitures ajoutées
+
+bouton.addEventListener("click", () => {
+  if (compteur < 3) {
+    let nouvelle = document.createElement("div");
+    nouvelle.classList.add("voiture");
+    nouvelle.textContent = "Voiture ajoutée ! 🚗";
+    garage.appendChild(nouvelle);
+    compteur++;
+  } else {
+    alert("Garage complet ! Impossible d’ajouter plus de voitures.");
+  }
+});
+
+
+→ Le script vérifie la condition avant d’ajouter un nouvel élément.
+→ Grâce à la variable compteur, il garde en mémoire combien de fois tu as cliqué.
+
+Tu viens de combiner événement + condition + logique de contrôle.
+
+🧱 Étape 5 – Bonus : mini-exercice
+
+Essaie de créer un petit script qui affiche les nombres de 1 à 10 dans la console,
+puis affiche “Moteur chaud ! 🚗” à la fin.
+
+(indice : une simple boucle for suffit !)
+
+⚡ Résumé
+
+✅ Les conditions (if / else) permettent au code de réfléchir.
+✅ Les opérateurs logiques combinent plusieurs tests.
+✅ Les boucles permettent de répéter une action sans la recopier.
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+✅ Ensemble, elles forment la logique de tout programme.

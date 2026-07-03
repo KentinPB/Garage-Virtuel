@@ -1,0 +1,292 @@
+<<<<<<< HEAD
+🎯 Objectifs du Jour 11
+
+À la fin de cette leçon, tu sauras :
+
+Modifier le style d’un élément depuis JavaScript.
+
+Ajouter, retirer ou basculer une classe CSS.
+
+Créer des effets visuels dynamiques (changement de couleur, apparition/disparition, animations simples).
+
+Comprendre la différence entre .style et .classList.
+
+Construire un petit bouton interactif pour ton “Garage Virtuel”.
+
+🧩 1. Modifier un style directement
+
+Chaque élément HTML possède une propriété .style qui correspond à ses règles CSS en ligne.
+
+Exemple simple :
+
+let titre = document.querySelector("h1");
+titre.style.color = "red";
+titre.style.textAlign = "center";
+titre.style.fontSize = "2em";
+
+
+⚙️ Cela agit directement sur l’élément, comme si tu ajoutais style="..." dans le HTML.
+Mais ce n’est pas idéal à long terme, car ton code devient vite illisible si tu modifies beaucoup de styles.
+
+🎨 2. Ajouter et retirer des classes CSS
+
+La méthode la plus propre et la plus moderne consiste à utiliser les classes CSS déjà définies dans ton fichier .css,
+et à les activer ou désactiver dynamiquement via JavaScript.
+
+Exemple :
+
+.highlight {
+  color: #e63946;
+  background-color: #111;
+  transition: 0.3s;
+}
+
+let titre = document.querySelector("h1");
+titre.classList.add("highlight");    // ajoute la classe
+titre.classList.remove("highlight"); // la retire
+titre.classList.toggle("highlight"); // l’ajoute si absente, la retire si présente
+
+
+🧠 .classList.toggle() est très utilisée pour les effets “on/off” : menu déroulant, thème sombre, etc.
+
+💡 3. Exemple interactif : changer de thème
+
+Imaginons que tu veux un bouton pour basculer ton site en “mode nuit”.
+
+HTML :
+<button id="themeBtn">Changer de thème</button>
+
+CSS :
+.dark-mode {
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+JS :
+let bouton = document.getElementById("themeBtn");
+
+bouton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+
+🌓 Résultat : à chaque clic, ton site bascule entre clair et sombre sans rechargement !
+
+⚙️ 4. Apparition et disparition d’un élément
+
+Tu peux aussi manipuler la visibilité :
+
+let image = document.querySelector("img");
+
+image.style.display = "none"; // cache
+image.style.display = "block"; // affiche
+
+
+Ou, encore mieux, utiliser une classe pour animer l’effet :
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+image.classList.toggle("hidden");
+
+
+Cela te permet de gérer la fluidité de l’apparition — un effet très utilisé dans les sites modernes.
+
+🧰 5. Mini-exercice – Garage interactif
+
+Sur ta page projets.html, ajoute un bouton pour “Activer le mode vitrine”.
+
+Quand tu cliques :
+
+Toutes les cartes .voiture deviennent légèrement plus lumineuses (ajoute une classe .vitrine).
+
+Le texte du bouton change :
+
+si activé → “Désactiver le mode vitrine”
+
+sinon → “Activer le mode vitrine”
+
+Exemple CSS :
+.vitrine {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.7);
+  transition: all 0.3s ease;
+}
+
+Exemple JS :
+let boutonVitrine = document.createElement("button");
+boutonVitrine.textContent = "Activer le mode vitrine";
+document.querySelector("main").prepend(boutonVitrine);
+
+boutonVitrine.addEventListener("click", () => {
+  let voitures = document.querySelectorAll(".voiture");
+
+  voitures.forEach(voiture => {
+    voiture.classList.toggle("vitrine");
+  });
+
+  if (voitures[0].classList.contains("vitrine")) {
+    boutonVitrine.textContent = "Désactiver le mode vitrine";
+  } else {
+    boutonVitrine.textContent = "Activer le mode vitrine";
+  }
+});
+
+
+🧠 Ici, tu combines :
+
+une boucle (forEach)
+
+la manipulation de classes CSS
+
+une condition logique pour changer le texte du bouton
+
+=======
+🎯 Objectifs du Jour 11
+
+À la fin de cette leçon, tu sauras :
+
+Modifier le style d’un élément depuis JavaScript.
+
+Ajouter, retirer ou basculer une classe CSS.
+
+Créer des effets visuels dynamiques (changement de couleur, apparition/disparition, animations simples).
+
+Comprendre la différence entre .style et .classList.
+
+Construire un petit bouton interactif pour ton “Garage Virtuel”.
+
+🧩 1. Modifier un style directement
+
+Chaque élément HTML possède une propriété .style qui correspond à ses règles CSS en ligne.
+
+Exemple simple :
+
+let titre = document.querySelector("h1");
+titre.style.color = "red";
+titre.style.textAlign = "center";
+titre.style.fontSize = "2em";
+
+
+⚙️ Cela agit directement sur l’élément, comme si tu ajoutais style="..." dans le HTML.
+Mais ce n’est pas idéal à long terme, car ton code devient vite illisible si tu modifies beaucoup de styles.
+
+🎨 2. Ajouter et retirer des classes CSS
+
+La méthode la plus propre et la plus moderne consiste à utiliser les classes CSS déjà définies dans ton fichier .css,
+et à les activer ou désactiver dynamiquement via JavaScript.
+
+Exemple :
+
+.highlight {
+  color: #e63946;
+  background-color: #111;
+  transition: 0.3s;
+}
+
+let titre = document.querySelector("h1");
+titre.classList.add("highlight");    // ajoute la classe
+titre.classList.remove("highlight"); // la retire
+titre.classList.toggle("highlight"); // l’ajoute si absente, la retire si présente
+
+
+🧠 .classList.toggle() est très utilisée pour les effets “on/off” : menu déroulant, thème sombre, etc.
+
+💡 3. Exemple interactif : changer de thème
+
+Imaginons que tu veux un bouton pour basculer ton site en “mode nuit”.
+
+HTML :
+<button id="themeBtn">Changer de thème</button>
+
+CSS :
+.dark-mode {
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+JS :
+let bouton = document.getElementById("themeBtn");
+
+bouton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+
+🌓 Résultat : à chaque clic, ton site bascule entre clair et sombre sans rechargement !
+
+⚙️ 4. Apparition et disparition d’un élément
+
+Tu peux aussi manipuler la visibilité :
+
+let image = document.querySelector("img");
+
+image.style.display = "none"; // cache
+image.style.display = "block"; // affiche
+
+
+Ou, encore mieux, utiliser une classe pour animer l’effet :
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+image.classList.toggle("hidden");
+
+
+Cela te permet de gérer la fluidité de l’apparition — un effet très utilisé dans les sites modernes.
+
+🧰 5. Mini-exercice – Garage interactif
+
+Sur ta page projets.html, ajoute un bouton pour “Activer le mode vitrine”.
+
+Quand tu cliques :
+
+Toutes les cartes .voiture deviennent légèrement plus lumineuses (ajoute une classe .vitrine).
+
+Le texte du bouton change :
+
+si activé → “Désactiver le mode vitrine”
+
+sinon → “Activer le mode vitrine”
+
+Exemple CSS :
+.vitrine {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.7);
+  transition: all 0.3s ease;
+}
+
+Exemple JS :
+let boutonVitrine = document.createElement("button");
+boutonVitrine.textContent = "Activer le mode vitrine";
+document.querySelector("main").prepend(boutonVitrine);
+
+boutonVitrine.addEventListener("click", () => {
+  let voitures = document.querySelectorAll(".voiture");
+
+  voitures.forEach(voiture => {
+    voiture.classList.toggle("vitrine");
+  });
+
+  if (voitures[0].classList.contains("vitrine")) {
+    boutonVitrine.textContent = "Désactiver le mode vitrine";
+  } else {
+    boutonVitrine.textContent = "Activer le mode vitrine";
+  }
+});
+
+
+🧠 Ici, tu combines :
+
+une boucle (forEach)
+
+la manipulation de classes CSS
+
+une condition logique pour changer le texte du bouton
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+C’est exactement le genre de code qu’on retrouve dans les sites pro : propre, interactif, élégant.

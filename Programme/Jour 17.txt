@@ -1,0 +1,136 @@
+<<<<<<< HEAD
+🎯 Objectifs du jour
+
+À la fin de ce jour, tu devras être capable de :
+
+comprendre le temps en JavaScript
+
+utiliser :
+
+setTimeout
+
+setInterval
+
+clearTimeout / clearInterval
+
+améliorer l’expérience utilisateur :
+
+messages temporaires
+
+feedback visuel
+
+animations simples (apparition / disparition)
+
+👉 Rien de “théorique lourd” : que du concret, directement applicable à ton Garage Virtuel 🚗
+
+🧠 Mise en situation (projet Garage Virtuel)
+
+Imagine :
+
+un message “Voiture ajoutée avec succès” qui disparaît après 3 secondes
+
+un badge “Garage chargé” au démarrage
+
+un effet de chargement léger
+
+une animation douce quand une voiture apparaît
+
+👉 Tout ça repose sur le temps.
+
+🔧 Les 2 outils clés du jour (sans code final)
+⏱️ 1. setTimeout
+
+Exécute une seule fois une action après un délai
+
+Logique :
+
+“Attends X millisecondes”
+
+“Puis fais quelque chose”
+
+🔁 2. setInterval
+
+Répète une action toutes les X millisecondes
+
+Logique :
+
+“Toutes les secondes…”
+
+“Toutes les 500 ms…”
+
+⚠️ Très puissant → mais à arrêter proprement
+
+🧩 Règle importante du Jour 17
+
+Le temps ne doit jamais modifier les données
+Il sert uniquement à améliorer l’affichage et l’expérience utilisateur
+
+=======
+🎯 Objectifs du jour
+
+À la fin de ce jour, tu devras être capable de :
+
+comprendre le temps en JavaScript
+
+utiliser :
+
+setTimeout
+
+setInterval
+
+clearTimeout / clearInterval
+
+améliorer l’expérience utilisateur :
+
+messages temporaires
+
+feedback visuel
+
+animations simples (apparition / disparition)
+
+👉 Rien de “théorique lourd” : que du concret, directement applicable à ton Garage Virtuel 🚗
+
+🧠 Mise en situation (projet Garage Virtuel)
+
+Imagine :
+
+un message “Voiture ajoutée avec succès” qui disparaît après 3 secondes
+
+un badge “Garage chargé” au démarrage
+
+un effet de chargement léger
+
+une animation douce quand une voiture apparaît
+
+👉 Tout ça repose sur le temps.
+
+🔧 Les 2 outils clés du jour (sans code final)
+⏱️ 1. setTimeout
+
+Exécute une seule fois une action après un délai
+
+Logique :
+
+“Attends X millisecondes”
+
+“Puis fais quelque chose”
+
+🔁 2. setInterval
+
+Répète une action toutes les X millisecondes
+
+Logique :
+
+“Toutes les secondes…”
+
+“Toutes les 500 ms…”
+
+⚠️ Très puissant → mais à arrêter proprement
+
+🧩 Règle importante du Jour 17
+
+Le temps ne doit jamais modifier les données
+Il sert uniquement à améliorer l’affichage et l’expérience utilisateur
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+👉 Exactement comme afficherGarage().

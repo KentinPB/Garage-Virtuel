@@ -1,0 +1,138 @@
+/* Styles expérimentaux pour la page d'accueil (index.html)
+   Conserve les variables définies dans style.css et ajoute des ajustements pour la mise en valeur du projet */
+
+/* Utilise les variables globales définies dans style.css pour palette plus vive */
+.hero {
+  padding: 48px 22px;
+  max-width: 1100px;
+  margin: 30px auto;
+  background: linear-gradient(180deg, rgba(230,57,70,0.06), rgba(247,127,0,0.03));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.hero:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero .Description {
+  font-size: 1.18em;
+  margin: 10px 30px 20px 30px;
+  color: var(--color-text-muted);
+}
+
+.presentation, .objectifs, .features, .tech, .evolution, .contribuer {
+  max-width: 920px;
+  margin: 28px auto;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+.presentation { border-left: 6px solid var(--color-primary); }
+.objectifs   { border-left: 6px solid var(--color-secondary); }
+.features    { border-left: 6px solid var(--color-accent); }
+.tech        { border-left: 6px solid var(--color-primary-dark); }
+.evolution   { border-left: 6px solid rgba(255,215,0,0.95); }
+.contribuer  { border-left: 6px solid var(--color-secondary); }
+
+.presentation h2, .objectifs h2, .features h2, .tech h2, .evolution h2, .contribuer h2 {
+  margin-top: 0;
+  color: var(--color-text-light);
+}
+
+.features ul, .objectifs ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  list-style: none;
+}
+
+.features li, .objectifs li {
+  background: linear-gradient(90deg, rgba(230,57,70,0.06), rgba(247,127,0,0.03));
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.02);
+  color: var(--color-text-light);
+}
+
+.features li::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+}
+
+.tech ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Remove default bullets for evolution list and add colored markers */
+.evolution ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.evolution li {
+  margin: 8px 0;
+  padding-left: 22px;
+  position: relative;
+  color: var(--color-text-light);
+}
+
+.evolution li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+}
+
+.pre-note {
+  display: block;
+  background: linear-gradient(90deg, rgba(27,27,27,0.6), rgba(37,37,37,0.6));
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 6px 0 12px 0;
+  color: var(--color-text-muted);
+}
+
+/* CTA flottant en bas à droite pour accéder aux projets */
+.cta-projets {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  padding: 14px 18px;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(214, 63, 81, 0.25);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.cta-projets:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(214, 63, 81, 0.32);
+}
+
+/* Ajustements responsive */
+@media (max-width: 768px) {
+  .hero { padding: 24px 14px; margin: 18px; }
+  .presentation, .objectifs, .features, .tech, .evolution, .contribuer { margin: 18px 12px; padding: 14px; }
+  .cta-projets { right: 12px; bottom: 12px; padding: 12px 14px; }
+}

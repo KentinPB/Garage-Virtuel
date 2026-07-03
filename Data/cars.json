@@ -1,0 +1,146 @@
+[
+  {
+    "marque": "Mazda",
+    "modele": "RX-7 FD3S",
+    "pays": "Japon",
+    "image": "https://images2.alphacoders.com/122/thumb-1920-1221640.png",
+    "description": "Moteur rotatif 1.3L bi-rotor – 276 ch. Design intemporel, équilibré, symbole du plaisir de conduite japonais.",
+    "fiche": ""
+  },
+  {
+    "marque": "Honda",
+    "modele": "NSX",
+    "pays": "Japon",
+    "image": "https://wallpapercave.com/wp/wp1919656.jpg",
+    "description": "Supercar emblématique, moteur V6 biturbo, équilibre parfait entre performance et confort.",
+    "fiche": ""
+  },
+  {
+    "marque": "Toyota",
+    "modele": "Supra MK4",
+    "pays": "Japon",
+    "image": "https://c.ndtvimg.com/2022-01/cqur3nrg_car_625x300_11_January_22.jpg",
+    "description": "Légende japonaise propulsée par le mythique moteur 2JZ-GTE, référence de puissance et de tuning.",
+    "fiche": ""
+  },
+  {
+    "marque": "Nissan",
+    "modele": "Skyline GT-R R34",
+    "pays": "Japon",
+    "image": "https://abcmoteur.fr/wp-content/uploads/2023/04/Nissan-Skyline-GT-R-Paul-Walker-scaled.jpeg",
+    "description": "Légendaire Skyline, moteur RB26DETT turbo, 4WD, symbole culte du tuning japonais.",
+    "fiche": ""
+  },
+  {
+    "marque": "Subaru",
+    "modele": "Impreza WRX STi",
+    "pays": "Japon",
+    "image": "https://www.classic-racing.fr/wp-content/uploads/2023/10/subaru-impreza-wrx-sti-rallye-1.jpeg",
+    "description": "Berline sportive 4WD, moteur boxer turbo, 300+ ch, domination en rallye.",
+    "fiche": ""
+  },
+  {
+    "marque": "Ferrari",
+    "modele": "F40",
+    "pays": "Italie",
+    "image": "https://cdn.motor1.com/images/mgl/2NEPEB/s1/simpson-ferrari-gtr.jpg",
+    "description": "Supercar emblématique des années 90, moteur V12 twin-turbo, 471 ch, performance extrême.",
+    "fiche": ""
+  },
+  {
+    "marque": "Lamborghini",
+    "modele": "Countach",
+    "pays": "Italie",
+    "image": "https://www.guide-autosport.com/wp-content/uploads/2017/11/lamborghini-countach-lp-5000-quattrovalvole-8.jpg",
+    "description": "Design révolutionnaire des années 70, moteur V12 atmosphérique, 455 ch, pure performance.",
+    "fiche": ""
+  },
+  {
+    "marque": "Porsche",
+    "modele": "911 Carrera",
+    "pays": "Allemagne",
+    "image": "https://images-porsche.imgix.net/-/media/6DFC261DD0B040A0A3FF9081BD9A36B9_7DFF4660C80843078B7D504B7A95BEEC_CZ26W03OX0001-911-carrera-s-side?w=2560&h=1440&q=45&crop=faces%2Centropy%2Cedges&auto=format",
+    "description": "Icône intemporelle, moteur boxer 6-cylindres, équilibre dynamique inégalé.",
+    "fiche": ""
+  },
+  {
+    "marque": "BMW",
+    "modele": "M3 E30",
+    "pays": "Allemagne",
+    "image": "https://cdn.motor1.com/images/mgl/m6K7e/s1/bmw-e30-m3-by-redux.jpg",
+    "description": "Berline sportive culte, moteur 4-cylindres S14, 192 ch, légende du sport automobile.",
+    "fiche": ""
+  },
+  {
+    "marque": "MercedesBenz",
+    "modele": "300 SL Gullwing",
+    "pays": "Allemagne",
+    "image": "https://www.tomhartleyjnr.com/wp-content/uploads/2022/10/HK-300SL-03472-scaled.jpg",
+    "description": "Légende des années 50, moteur 6-cylindres 3.0L, 215 ch, design révolutionnaire avec portes papillon.",
+    "fiche": ""
+  },
+  {
+    "marque": "Jaguar",
+    "modele": "E-Type",
+    "pays": "Angleterre",
+    "image": "https://auto-storica.com/wp-content/uploads/2024/07/1-1-scaled.jpg",
+    "description": "Chef-d'œuvre britannique des années 60, moteur inline-6 4.2L, design élégant et sport.",
+    "fiche": ""
+  },
+  {
+    "marque": "Lotus",
+    "modele": "Esprit",
+    "pays": "Angleterre",
+    "image": "https://www.info-auto-moto.fr/wp-content/uploads/2023/03/Lotus-Esprit.webp",
+    "description": "Supercar britannique, moteur V8 turbo, design futuriste, légèreté et maniabilité extrême.",
+    "fiche": ""
+  },
+  {
+    "marque": "Renault",
+    "modele": "5 Turbo",
+    "pays": "France",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Renault_R5_turbo_2_mid-engine_Mittelmotor_118_KW_160_PS_achterwielaandrijving_Heckantrieb_-_1983-86_-_Foto_2018_%C2%A9_Wolfgang_Pehlemann_P1270473.jpg",
+    "description": "Petite bomba française, moteur turbo 1.4L, 160 ch, réactive et amusante.",
+    "fiche": ""
+  },
+  {
+    "marque": "Bugatti",
+    "modele": "Type 35",
+    "pays": "France",
+    "image": "https://bugatti-newsroom.imgix.net/5acb52d5-b3b5-4065-ae31-4dd0de059f0c/_29r5167",
+    "description": "Légende de la course, moteur 8-cylindres 2.0L, 90 ch, champion des années 1920-30.",
+    "fiche": ""
+  },
+  {
+    "marque": "Chevrolet",
+    "modele": "Corvette C1",
+    "pays": "États-Unis",
+    "image": "https://www.route59.be/wp-content/uploads/2023/09/DSC01165-HDR-310-scaled.jpg",
+    "description": "Première supercar américaine, moteur V8 6.7L, 290 ch, style audacieux et intemporel.",
+    "fiche": ""
+  },
+  {
+    "marque": "Dodge",
+    "modele": "Challenger R/T",
+    "pays": "États-Unis",
+    "image": "https://european-vintage-cars.com/wp-content/uploads/2020/03/1973-dodge-challenger-r-t.jpg",
+    "description": "Muscle car américain culte, moteur V8 440 Big Block, 375 ch, présence brute.",
+    "fiche": ""
+  },
+  {
+    "marque": "Volvo",
+    "modele": "P1800",
+    "pays": "Suède",
+    "image": "https://images.caradisiac.com/logos/2/0/7/4/262074/S0-volvo-p1800-retour-en-thermique-avec-plus-de-400-ch-185160.jpg",
+    "description": "Coupé sport suédois élégant, moteur 4-cylindres 1.8L, 108 ch, fiabilité légendaire.",
+    "fiche": ""
+  },
+  {
+    "marque": "Saab",
+    "modele": "Sonett III",
+    "pays": "Suède",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpAIo0KEbxHEc2bhBuwgM9OEtbvNEtQ5YeXA&s",
+    "description": "Coupé compacte suédoise originale, moteur V4, 65 ch, légèreté et aérodynamisme.",
+    "fiche": ""
+  }
+]

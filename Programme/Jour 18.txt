@@ -1,0 +1,216 @@
+<<<<<<< HEAD
+🎯 Objectifs
+
+Comprendre ce qu’est une API et le format JSON
+
+Savoir utiliser fetch() pour récupérer des données
+
+Savoir gérer :
+
+✅ succès (then / await)
+
+❌ erreurs (catch / try...catch)
+
+⏳ chargement (feedback utilisateur)
+
+Injecter des données externes dans ton projet :
+
+soit pour pré-remplir des voitures
+
+soit pour charger un catalogue de modèles
+
+Bonus (si on a le temps) :
+
+localStorage + “données distantes” ensemble (stratégie hybride)
+
+🧩 Partie A — JSON (fondations)
+
+JSON = objet JavaScript “en texte”
+
+Différence :
+
+Objet JS: { marque: "Mazda" }
+
+JSON: {"marque":"Mazda"}
+
+Conversion :
+
+JSON.stringify(obj) (→ texte)
+
+JSON.parse(texte) (→ objet)
+
+Mini-pratique : lire/écrire un tableau de voitures au format JSON.
+
+🌐 Partie B — fetch() (récupération de données)
+
+fetch(url) renvoie une Promise
+
+Deux façons d’écrire :
+
+.then(...)
+
+async/await (plus lisible)
+
+Étapes typiques :
+
+fetch
+
+vérifier la réponse (response.ok)
+
+convertir en JSON (response.json())
+
+utiliser les données (afficher, stocker, filtrer…)
+
+🛡️ Partie C — erreurs & robustesse
+
+Erreurs possibles :
+
+URL invalide / 404
+
+problème réseau
+
+JSON mal formé
+
+Gestion propre :
+
+try { ... } catch(e) { ... }
+
+message utilisateur via toast (tu l’as déjà 🔥)
+
+⏳ Partie D — UX “chargement”
+
+Afficher “Chargement…” pendant la requête
+
+Désactiver un bouton pendant le chargement
+
+Remettre l’UI normale à la fin
+
+🚗 Partie E — Application à ton Garage Virtuel
+
+On intègre fetch de façon utile, au choix :
+
+Charger une liste de voitures initiales depuis un fichier cars.json
+
+Charger les marques/modèles depuis un JSON pour auto-compléter
+
+Importer une liste au clic (“Importer des voitures”)
+
+(On choisira l’option la plus simple et rentable pour ton projet.)
+
+✅ Mini-test (fin de Jour 18)
+
+expliquer la différence JS object vs JSON
+
+écrire un fetch qui récupère des voitures
+
+gérer une erreur réseau proprement
+
+=======
+🎯 Objectifs
+
+Comprendre ce qu’est une API et le format JSON
+
+Savoir utiliser fetch() pour récupérer des données
+
+Savoir gérer :
+
+✅ succès (then / await)
+
+❌ erreurs (catch / try...catch)
+
+⏳ chargement (feedback utilisateur)
+
+Injecter des données externes dans ton projet :
+
+soit pour pré-remplir des voitures
+
+soit pour charger un catalogue de modèles
+
+Bonus (si on a le temps) :
+
+localStorage + “données distantes” ensemble (stratégie hybride)
+
+🧩 Partie A — JSON (fondations)
+
+JSON = objet JavaScript “en texte”
+
+Différence :
+
+Objet JS: { marque: "Mazda" }
+
+JSON: {"marque":"Mazda"}
+
+Conversion :
+
+JSON.stringify(obj) (→ texte)
+
+JSON.parse(texte) (→ objet)
+
+Mini-pratique : lire/écrire un tableau de voitures au format JSON.
+
+🌐 Partie B — fetch() (récupération de données)
+
+fetch(url) renvoie une Promise
+
+Deux façons d’écrire :
+
+.then(...)
+
+async/await (plus lisible)
+
+Étapes typiques :
+
+fetch
+
+vérifier la réponse (response.ok)
+
+convertir en JSON (response.json())
+
+utiliser les données (afficher, stocker, filtrer…)
+
+🛡️ Partie C — erreurs & robustesse
+
+Erreurs possibles :
+
+URL invalide / 404
+
+problème réseau
+
+JSON mal formé
+
+Gestion propre :
+
+try { ... } catch(e) { ... }
+
+message utilisateur via toast (tu l’as déjà 🔥)
+
+⏳ Partie D — UX “chargement”
+
+Afficher “Chargement…” pendant la requête
+
+Désactiver un bouton pendant le chargement
+
+Remettre l’UI normale à la fin
+
+🚗 Partie E — Application à ton Garage Virtuel
+
+On intègre fetch de façon utile, au choix :
+
+Charger une liste de voitures initiales depuis un fichier cars.json
+
+Charger les marques/modèles depuis un JSON pour auto-compléter
+
+Importer une liste au clic (“Importer des voitures”)
+
+(On choisira l’option la plus simple et rentable pour ton projet.)
+
+✅ Mini-test (fin de Jour 18)
+
+expliquer la différence JS object vs JSON
+
+écrire un fetch qui récupère des voitures
+
+gérer une erreur réseau proprement
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+afficher les voitures via afficherGarage(...)

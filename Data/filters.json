@@ -1,0 +1,199 @@
+[
+  {
+    "Allemagne": {
+      "Audi": [
+        "A1",
+        "A3"
+      ],
+      "BMW": [
+        "M3 E30",
+        "Série 1",
+        "X1",
+        "X3",
+        "X7"
+      ],
+      "MercedesBenz": [
+        "300 SL Gullwing",
+        "Classe A",
+        "Classe C",
+        "GLC"
+      ],
+      "Opel": [],
+      "Porsche": [],
+      "Smart": [],
+      "Skoda": [],
+      "Volkswagen": [
+        "Golf",
+        "Polo",
+        "T-Cross",
+        "T-Roc"
+      ]
+    }
+  },
+  {
+    "Angleterre": {
+      "Aston Martin": [],
+      "Bentley": [],
+      "Caterham": [],
+      "Jaguar": [],
+      "Land Rover": [],
+      "Lotus": [
+        "Esprit"
+      ],
+      "McLaren": [],
+      "Mini": [
+        "Mini"
+      ],
+      "Rolls Royce": [],
+      "Shelby": []
+    }
+  },
+  {
+    "Chine": {
+      "Aiways": [
+        "U6"
+      ],
+      "BYD": [
+        "Seal"
+      ],
+      "Denza": [],
+      "Geely Auto": [],
+      "Leapmotor": [],
+      "MG Motor": [],
+      "NIO": [],
+      "Polestar": [],
+      "Seres": [],
+      "XPeng": []
+    }
+  },
+  {
+    "Corée": {
+      "Hyundai": [
+        "Tucson"
+      ],
+      "Kia": [],
+      "SsangYong": []
+    }
+  },
+  {
+    "Espagne": {
+      "Cupra": [],
+      "Seat": []
+    }
+  },
+  {
+    "États-Unis": {
+      "Cadillac": [],
+      "Chevrolet": [],
+      "Chrysler": [],
+      "Dodge": [],
+      "Fisker": [],
+      "Ford": [
+        "Puma"
+      ],
+      "G M C": [],
+      "Hummer": [],
+      "Jeep": [],
+      "Rivian": [],
+      "Tesla": []
+    }
+  },
+  {
+    "France": {
+      "Alpine": [],
+      "Bugatti": [],
+      "Citroën": [
+        "C3",
+        "C3 AIRCROSS",
+        "C4"
+      ],
+      "Dacia": [
+        "Duster",
+        "Spring"
+      ],
+      "DS": [],
+      "Peugeot": [
+        "2008",
+        "208",
+        "3008",
+        "308",
+        "408",
+        "5008",
+        "508"
+      ],
+      "PGO": [],
+      "Renault": [
+        "Clio",
+        "Captur",
+        "Mégane",
+        "Twingo"
+      ],
+      "Venturi": [],
+      "Bolloré": []
+    }
+  },
+  {
+    "Italie": {
+      "Abarth": [],
+      "Alfa Romeo": [
+        "Brera",
+        "Giulia",
+        "Giulietta",
+        "Spider",
+        "Tonale"
+      ],
+      "Ferrari": [],
+      "Fiat": [
+        "500"
+      ],
+      "Lamborghini": [
+        "Countach"
+      ],
+      "Lancia": [],
+      "Maserati": [],
+      "Pagani": []
+    }
+  },
+  {
+    "Japon": {
+      "Daihatsu": [],
+      "Honda": [],
+      "Infiniti": [],
+      "Isuzu": [],
+      "Mazda": [],
+      "Mitsubishi": [],
+      "Nissan": [],
+      "Subaru": [],
+      "Suzuki": [],
+      "Toyota": [
+        "C-HR",
+        "Corolla",
+        "Tucson",
+        "Yaris",
+        "Yaris Cross"
+      ]
+    }
+  },
+  {
+    "Suède": {
+      "Koenigsegg": [],
+      "Polestar": [],
+      "Volvo": []
+    }
+  },
+  {
+    "Vietnam": {
+      "VinFast": []
+    }
+  },
+  {
+    "Autres": {
+      "BRP": [],
+      "Devinci": [],
+      "Gordon Murray Automotive": [],
+      "Ineos": [],
+      "RIMAC": [],
+      "Zenvo": []
+    }
+  }
+]

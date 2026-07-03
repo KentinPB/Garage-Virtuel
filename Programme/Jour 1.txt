@@ -1,0 +1,356 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Comprendre la structure minimale d’un site web.
+
+Créer ta première page HTML à partir de zéro.
+
+Apprendre à afficher du texte, une image et un lien.
+
+🧱 Étape 1 - Les balises de base du HTML
+
+<!DOCTYPE html>
+
+C’est une déclaration, pas une balise.
+Elle indique au navigateur : « Ceci est une page HTML5 ».
+Sans elle, certains navigateurs passeraient en “mode compatibilité”, ce qui pourrait casser ton design ou tes styles.
+
+<html lang="fr"> ... </html>
+
+C’est la balise racine, celle qui englobe tout ton document.
+L’attribut lang="fr" indique la langue principale de ton contenu — utile pour l’accessibilité (lecteurs d’écran, référencement, traduction automatique).
+
+Tout le reste du code se trouve à l’intérieur de cette balise.
+
+<head> ... </head>
+
+Le cerveau de ta page : il ne s’affiche pas, mais contient les métadonnées, les liens et les paramètres techniques.
+
+Tu y mets :
+
+<meta charset="UTF-8"> → indique que le texte utilise l’encodage UTF-8 (pour afficher correctement les caractères accentués).
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> → permet à la page d’être adaptée aux écrans mobiles (responsive design).
+
+<title> → le titre qui apparaît dans l’onglet du navigateur.
+
+Tout ce qui se trouve dans <head> sert au navigateur, pas directement à l’utilisateur.
+
+<body> ... </body>
+
+C’est la partie visible de ta page — le “corps”.
+Tout ce que tu veux montrer à l’utilisateur s’y trouve : titres, paragraphes, images, liens, boutons, etc.
+
+🧩 Les balises de contenu
+<h1>, <h2>, <h3>, etc.
+
+Ce sont les titres hiérarchiques.
+
+<h1> → titre principal de la page (unique).
+
+<h2> → sous-titre ou section importante.
+
+<h3> → sous-section, et ainsi de suite.
+
+Ils servent autant à structurer le texte qu’à aider Google et les lecteurs d’écran à comprendre la logique de la page.
+
+<p>
+
+Abréviation de paragraph, c’est le bloc de texte standard.
+Tout texte “normal” est mis dans un <p>.
+Le navigateur y ajoute automatiquement un léger espace avant et après.
+
+<img src="..." alt="..." width="...">
+
+Balise auto-fermante : elle ne contient pas de texte intérieur, seulement des attributs.
+
+src (source) → indique le chemin de l’image.
+
+alt (alternative text) → description de l’image si elle ne s’affiche pas (important pour l’accessibilité).
+
+width / height → dimensions (en pixels ou pourcentage).
+
+💡 Bon réflexe : toujours remplir alt avec une vraie description, pas juste “image1”.
+
+<a href="..." target="_blank"> ... </a>
+
+C’est la balise hyperlien (anchor).
+
+href (hypertext reference) → destination du lien.
+
+target="_blank" → ouvre le lien dans un nouvel onglet.
+
+rel="noopener noreferrer" → (optionnel mais conseillé) protège ta page contre certaines failles quand tu ouvres un autre site.
+
+<ul> et <li>
+
+Ce sont les listes non ordonnées (avec des puces).
+
+<ul> → unordered list, le conteneur de la liste.
+
+<li> → list item, chaque élément de la liste.
+
+💡 Si tu veux une liste numérotée, tu peux utiliser <ol> à la place (pour ordered list).
+
+<strong> et <em>
+
+<strong> → met le texte en gras, mais avec une signification sémantique : cela indique que ce mot est important dans le contexte.
+
+<em> → met le texte en italique, signifiant une insistance ou un accent émotionnel.
+
+Ils ne servent pas qu’à “faire joli”, mais à donner du sens au texte pour les moteurs de recherche et les lecteurs d’écran.
+
+🧩 Étape 2 – Installer ton environnement
+
+Télécharge Visual Studio Code (VS Code) si ce n’est pas déjà fait.
+👉 https://code.visualstudio.com/
+
+Crée un dossier nommé garage quelque part sur ton ordinateur (ex : Bureau).
+
+Ouvre ce dossier dans VS Code (Fichier > Ouvrir un dossier).
+
+Dans VS Code, crée un nouveau fichier et nomme-le index.html.
+
+🧱 Étape 3 – La structure d’une page HTML
+
+Colle ce code dans index.html :
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Garage Virtuel</title>
+</head>
+<body>
+  <h1>Bienvenue dans mon garage</h1>
+  <p>Voici où je garde mes rêves motorisés.</p>
+</body>
+</html>
+
+
+Explication :
+
+<!DOCTYPE html> → indique au navigateur qu’il s’agit d’une page HTML5.
+
+<html> → le conteneur de toute ta page.
+
+<head> → les informations invisibles (titre, encodage, etc.).
+
+<body> → le contenu visible à l’écran.
+
+Sauvegarde ton fichier, puis double-clique dessus dans ton dossier : il s’ouvrira dans ton navigateur web.
+
+🖼️ Étape 4 – Ajouter une image et un lien
+
+Sous ton paragraphe <p>, ajoute ceci :
+
+<img src="https://cdn.motor1.com/images/mgl/jWmWe/s1/2018-mazda-mx-5-miata.jpg" alt="Ma Mazda MX-5" width="400">
+
+<p>Tu veux en savoir plus ?</p>
+<a href="https://www.mazda.fr" target="_blank">Visiter le site de Mazda</a>
+
+
+Ce que tu viens d’apprendre :
+
+<img> affiche une image (ici depuis internet).
+
+alt décrit l’image (utile si elle ne se charge pas).
+
+width ajuste sa taille.
+
+<a href=""> crée un lien.
+
+target="_blank" l’ouvre dans un nouvel onglet.
+
+🎯 Mission Bonus (facultative mais utile)
+
+Ajoute un sous-titre <h2> : “Modèles préférés”.
+
+Crée une liste <ul> avec trois voitures de ton choix (ex : RX-7, MX-5, Supra).
+
+Teste ensuite la page dans ton navigateur et observe le rendu.
+
+📘 Fin du jour 1 – Compétences acquises
+
+✅ Comprendre la structure HTML d’une page.
+✅ Créer et afficher du contenu (texte, images, liens).
+=======
+🎯 Objectif du jour
+
+Comprendre la structure minimale d’un site web.
+
+Créer ta première page HTML à partir de zéro.
+
+Apprendre à afficher du texte, une image et un lien.
+
+🧱 Étape 1 - Les balises de base du HTML
+
+<!DOCTYPE html>
+
+C’est une déclaration, pas une balise.
+Elle indique au navigateur : « Ceci est une page HTML5 ».
+Sans elle, certains navigateurs passeraient en “mode compatibilité”, ce qui pourrait casser ton design ou tes styles.
+
+<html lang="fr"> ... </html>
+
+C’est la balise racine, celle qui englobe tout ton document.
+L’attribut lang="fr" indique la langue principale de ton contenu — utile pour l’accessibilité (lecteurs d’écran, référencement, traduction automatique).
+
+Tout le reste du code se trouve à l’intérieur de cette balise.
+
+<head> ... </head>
+
+Le cerveau de ta page : il ne s’affiche pas, mais contient les métadonnées, les liens et les paramètres techniques.
+
+Tu y mets :
+
+<meta charset="UTF-8"> → indique que le texte utilise l’encodage UTF-8 (pour afficher correctement les caractères accentués).
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> → permet à la page d’être adaptée aux écrans mobiles (responsive design).
+
+<title> → le titre qui apparaît dans l’onglet du navigateur.
+
+Tout ce qui se trouve dans <head> sert au navigateur, pas directement à l’utilisateur.
+
+<body> ... </body>
+
+C’est la partie visible de ta page — le “corps”.
+Tout ce que tu veux montrer à l’utilisateur s’y trouve : titres, paragraphes, images, liens, boutons, etc.
+
+🧩 Les balises de contenu
+<h1>, <h2>, <h3>, etc.
+
+Ce sont les titres hiérarchiques.
+
+<h1> → titre principal de la page (unique).
+
+<h2> → sous-titre ou section importante.
+
+<h3> → sous-section, et ainsi de suite.
+
+Ils servent autant à structurer le texte qu’à aider Google et les lecteurs d’écran à comprendre la logique de la page.
+
+<p>
+
+Abréviation de paragraph, c’est le bloc de texte standard.
+Tout texte “normal” est mis dans un <p>.
+Le navigateur y ajoute automatiquement un léger espace avant et après.
+
+<img src="..." alt="..." width="...">
+
+Balise auto-fermante : elle ne contient pas de texte intérieur, seulement des attributs.
+
+src (source) → indique le chemin de l’image.
+
+alt (alternative text) → description de l’image si elle ne s’affiche pas (important pour l’accessibilité).
+
+width / height → dimensions (en pixels ou pourcentage).
+
+💡 Bon réflexe : toujours remplir alt avec une vraie description, pas juste “image1”.
+
+<a href="..." target="_blank"> ... </a>
+
+C’est la balise hyperlien (anchor).
+
+href (hypertext reference) → destination du lien.
+
+target="_blank" → ouvre le lien dans un nouvel onglet.
+
+rel="noopener noreferrer" → (optionnel mais conseillé) protège ta page contre certaines failles quand tu ouvres un autre site.
+
+<ul> et <li>
+
+Ce sont les listes non ordonnées (avec des puces).
+
+<ul> → unordered list, le conteneur de la liste.
+
+<li> → list item, chaque élément de la liste.
+
+💡 Si tu veux une liste numérotée, tu peux utiliser <ol> à la place (pour ordered list).
+
+<strong> et <em>
+
+<strong> → met le texte en gras, mais avec une signification sémantique : cela indique que ce mot est important dans le contexte.
+
+<em> → met le texte en italique, signifiant une insistance ou un accent émotionnel.
+
+Ils ne servent pas qu’à “faire joli”, mais à donner du sens au texte pour les moteurs de recherche et les lecteurs d’écran.
+
+🧩 Étape 2 – Installer ton environnement
+
+Télécharge Visual Studio Code (VS Code) si ce n’est pas déjà fait.
+👉 https://code.visualstudio.com/
+
+Crée un dossier nommé garage quelque part sur ton ordinateur (ex : Bureau).
+
+Ouvre ce dossier dans VS Code (Fichier > Ouvrir un dossier).
+
+Dans VS Code, crée un nouveau fichier et nomme-le index.html.
+
+🧱 Étape 3 – La structure d’une page HTML
+
+Colle ce code dans index.html :
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Garage Virtuel</title>
+</head>
+<body>
+  <h1>Bienvenue dans mon garage</h1>
+  <p>Voici où je garde mes rêves motorisés.</p>
+</body>
+</html>
+
+
+Explication :
+
+<!DOCTYPE html> → indique au navigateur qu’il s’agit d’une page HTML5.
+
+<html> → le conteneur de toute ta page.
+
+<head> → les informations invisibles (titre, encodage, etc.).
+
+<body> → le contenu visible à l’écran.
+
+Sauvegarde ton fichier, puis double-clique dessus dans ton dossier : il s’ouvrira dans ton navigateur web.
+
+🖼️ Étape 4 – Ajouter une image et un lien
+
+Sous ton paragraphe <p>, ajoute ceci :
+
+<img src="https://cdn.motor1.com/images/mgl/jWmWe/s1/2018-mazda-mx-5-miata.jpg" alt="Ma Mazda MX-5" width="400">
+
+<p>Tu veux en savoir plus ?</p>
+<a href="https://www.mazda.fr" target="_blank">Visiter le site de Mazda</a>
+
+
+Ce que tu viens d’apprendre :
+
+<img> affiche une image (ici depuis internet).
+
+alt décrit l’image (utile si elle ne se charge pas).
+
+width ajuste sa taille.
+
+<a href=""> crée un lien.
+
+target="_blank" l’ouvre dans un nouvel onglet.
+
+🎯 Mission Bonus (facultative mais utile)
+
+Ajoute un sous-titre <h2> : “Modèles préférés”.
+
+Crée une liste <ul> avec trois voitures de ton choix (ex : RX-7, MX-5, Supra).
+
+Teste ensuite la page dans ton navigateur et observe le rendu.
+
+📘 Fin du jour 1 – Compétences acquises
+
+✅ Comprendre la structure HTML d’une page.
+✅ Créer et afficher du contenu (texte, images, liens).
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+✅ Manipuler le code dans un éditeur professionnel.

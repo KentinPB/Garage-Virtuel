@@ -1,0 +1,266 @@
+<<<<<<< HEAD
+🎓 Jour 15 – Les filtres, la recherche et l’interactivité dans le DOM
+🎯 Objectifs pédagogiques
+
+À la fin de cette leçon, tu sauras :
+
+Créer un champ de recherche dynamique pour filtrer les éléments du DOM en direct.
+
+Utiliser la méthode .includes() pour rechercher une sous-chaîne dans une variable.
+
+Combiner ton tableau JavaScript (garage[]) avec des filtres visuels (DOM).
+
+Mettre à jour l’affichage en temps réel selon la saisie de l’utilisateur.
+
+🧠 Introduction
+
+Ton site “Garage Virtuel” devient de plus en plus complet : tu peux ajouter, supprimer et sauvegarder des voitures.
+Mais imagine un utilisateur avec 20 voitures enregistrées.
+Il voudra sans doute chercher une voiture spécifique sans devoir tout faire défiler.
+
+C’est là qu’interviennent les filtres dynamiques : en tapant “Mazda” dans un champ de recherche, ton script doit automatiquement afficher uniquement les cartes correspondantes.
+
+🔬 Exemple théorique
+
+Avant de l’intégrer dans ton site, regarde ce mini-exemple simple :
+
+let voitures = ["Mazda RX-7", "Toyota Supra", "Honda NSX"];
+
+let recherche = "Mazda";
+let resultat = voitures.filter(nom => nom.toLowerCase().includes(recherche.toLowerCase()));
+
+console.log(resultat); // ["Mazda RX-7"]
+
+
+Ici, .filter() crée un nouveau tableau avec seulement les éléments qui contiennent le mot “Mazda”.
+.includes() vérifie si une sous-chaîne est présente.
+.toLowerCase() permet de rendre la recherche insensible à la casse (maZda ou MAZDA fonctionnent aussi).
+
+🧩 Exercice pratique – Ajouter une barre de recherche dans ton Garage
+💼 Contexte
+
+Tu vas ajouter un champ de recherche en haut de ta page projets.html
+pour permettre à l’utilisateur de filtrer les voitures présentes dans le garage.
+
+🧱 Étapes
+1. Ajoute le champ de recherche dans ton HTML
+
+Juste au-dessus du conteneur .garage-container dans projets.html :
+
+<input type="text" id="recherche" placeholder="🔍 Rechercher une voiture..." />
+
+
+Tu peux le styliser plus tard dans garage.css si tu veux, par exemple :
+
+#recherche {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+2. Modifie ton script JavaScript
+
+Tu vas capter la saisie utilisateur et filtrer dynamiquement ton tableau garage.
+
+Ajoute ceci à la fin de ton script.js :
+
+/*=== Recherche dynamique ===*/
+let champRecherche = document.getElementById("recherche");
+
+if (champRecherche) {
+  champRecherche.addEventListener("input", () => {
+    let terme = champRecherche.value.toLowerCase();
+    let voituresFiltrees = garage.filter(voiture =>
+      voiture.nom.toLowerCase().includes(terme) ||
+      voiture.description.toLowerCase().includes(terme)
+    );
+
+    afficherVoituresFiltrees(voituresFiltrees);
+  });
+}
+
+/*=== Fonction d'affichage filtré ===*/
+function afficherVoituresFiltrees(voitures) {
+  const container = document.querySelector(".garage-container");
+  container.innerHTML = "";
+
+  for (let voiture of voitures) {
+    let nouvelle = document.createElement("div");
+    nouvelle.classList.add("voiture");
+
+    nouvelle.innerHTML = `
+      <img src="${voiture.image}" alt="${voiture.nom}">
+      <h3>${voiture.nom}</h3>
+      <p>${voiture.description}</p>
+    `;
+    container.appendChild(nouvelle);
+  }
+}
+
+
+Ce code écoute chaque touche tapée dans la barre de recherche et :
+
+Compare le texte entré avec les noms et descriptions des voitures.
+
+Met à jour l’affichage instantanément.
+
+N’altère pas ton tableau principal garage[], il ne fait qu’en montrer une version filtrée.
+
+🔎 À tester :
+
+Lance ton site.
+
+Tape “Mazda”, “Toyota” ou “rotatif” dans la barre de recherche.
+
+Les cartes non correspondantes doivent disparaître en direct.
+
+Astuce : tu peux effacer le champ pour tout réafficher.
+
+🧭 Pour aller plus loin
+
+Tu pourras ensuite :
+
+Ajouter un tri par puissance, par ordre alphabétique, ou par date d’ajout.
+
+Créer des filtres visuels (ex. : cases à cocher “Japonaises”, “Européennes”, etc.).
+
+=======
+🎓 Jour 15 – Les filtres, la recherche et l’interactivité dans le DOM
+🎯 Objectifs pédagogiques
+
+À la fin de cette leçon, tu sauras :
+
+Créer un champ de recherche dynamique pour filtrer les éléments du DOM en direct.
+
+Utiliser la méthode .includes() pour rechercher une sous-chaîne dans une variable.
+
+Combiner ton tableau JavaScript (garage[]) avec des filtres visuels (DOM).
+
+Mettre à jour l’affichage en temps réel selon la saisie de l’utilisateur.
+
+🧠 Introduction
+
+Ton site “Garage Virtuel” devient de plus en plus complet : tu peux ajouter, supprimer et sauvegarder des voitures.
+Mais imagine un utilisateur avec 20 voitures enregistrées.
+Il voudra sans doute chercher une voiture spécifique sans devoir tout faire défiler.
+
+C’est là qu’interviennent les filtres dynamiques : en tapant “Mazda” dans un champ de recherche, ton script doit automatiquement afficher uniquement les cartes correspondantes.
+
+🔬 Exemple théorique
+
+Avant de l’intégrer dans ton site, regarde ce mini-exemple simple :
+
+let voitures = ["Mazda RX-7", "Toyota Supra", "Honda NSX"];
+
+let recherche = "Mazda";
+let resultat = voitures.filter(nom => nom.toLowerCase().includes(recherche.toLowerCase()));
+
+console.log(resultat); // ["Mazda RX-7"]
+
+
+Ici, .filter() crée un nouveau tableau avec seulement les éléments qui contiennent le mot “Mazda”.
+.includes() vérifie si une sous-chaîne est présente.
+.toLowerCase() permet de rendre la recherche insensible à la casse (maZda ou MAZDA fonctionnent aussi).
+
+🧩 Exercice pratique – Ajouter une barre de recherche dans ton Garage
+💼 Contexte
+
+Tu vas ajouter un champ de recherche en haut de ta page projets.html
+pour permettre à l’utilisateur de filtrer les voitures présentes dans le garage.
+
+🧱 Étapes
+1. Ajoute le champ de recherche dans ton HTML
+
+Juste au-dessus du conteneur .garage-container dans projets.html :
+
+<input type="text" id="recherche" placeholder="🔍 Rechercher une voiture..." />
+
+
+Tu peux le styliser plus tard dans garage.css si tu veux, par exemple :
+
+#recherche {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+2. Modifie ton script JavaScript
+
+Tu vas capter la saisie utilisateur et filtrer dynamiquement ton tableau garage.
+
+Ajoute ceci à la fin de ton script.js :
+
+/*=== Recherche dynamique ===*/
+let champRecherche = document.getElementById("recherche");
+
+if (champRecherche) {
+  champRecherche.addEventListener("input", () => {
+    let terme = champRecherche.value.toLowerCase();
+    let voituresFiltrees = garage.filter(voiture =>
+      voiture.nom.toLowerCase().includes(terme) ||
+      voiture.description.toLowerCase().includes(terme)
+    );
+
+    afficherVoituresFiltrees(voituresFiltrees);
+  });
+}
+
+/*=== Fonction d'affichage filtré ===*/
+function afficherVoituresFiltrees(voitures) {
+  const container = document.querySelector(".garage-container");
+  container.innerHTML = "";
+
+  for (let voiture of voitures) {
+    let nouvelle = document.createElement("div");
+    nouvelle.classList.add("voiture");
+
+    nouvelle.innerHTML = `
+      <img src="${voiture.image}" alt="${voiture.nom}">
+      <h3>${voiture.nom}</h3>
+      <p>${voiture.description}</p>
+    `;
+    container.appendChild(nouvelle);
+  }
+}
+
+
+Ce code écoute chaque touche tapée dans la barre de recherche et :
+
+Compare le texte entré avec les noms et descriptions des voitures.
+
+Met à jour l’affichage instantanément.
+
+N’altère pas ton tableau principal garage[], il ne fait qu’en montrer une version filtrée.
+
+🔎 À tester :
+
+Lance ton site.
+
+Tape “Mazda”, “Toyota” ou “rotatif” dans la barre de recherche.
+
+Les cartes non correspondantes doivent disparaître en direct.
+
+Astuce : tu peux effacer le champ pour tout réafficher.
+
+🧭 Pour aller plus loin
+
+Tu pourras ensuite :
+
+Ajouter un tri par puissance, par ordre alphabétique, ou par date d’ajout.
+
+Créer des filtres visuels (ex. : cases à cocher “Japonaises”, “Européennes”, etc.).
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Mais chaque chose en son temps. Pour l’instant, concentre-toi sur la recherche dynamique : c’est une des bases de l’interactivité moderne.

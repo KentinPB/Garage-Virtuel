@@ -1,0 +1,260 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Découvrir les balises de structure sémantique du HTML 5.
+
+Créer un site comportant plusieurs sections distinctes : en-tête, navigation, contenu principal et pied de page.
+
+Apprendre à relier plusieurs pages entre elles (comme un petit site).
+
+🧩 Étape 1 – Les nouvelles balises de structure
+
+Avant, on utilisait souvent seulement <div>.
+Mais aujourd’hui, HTML 5 offre des balises plus expressives : elles décrivent leur rôle dans la page.
+Voici celles que tu vas manipuler :
+
+<header>
+
+Contient le haut de la page : titre, logo, barre de navigation…
+Comparable au bandeau supérieur d’un tableau de bord.
+
+<nav>
+
+Section dédiée à la navigation : regroupe les liens internes (ex. : “Accueil”, “Modèles”, “Contact”).
+Elle aide aussi Google à comprendre la structure du site.
+
+<main>
+
+Le cœur du contenu : tout ce qui est unique à la page actuelle (articles, sections, photos…).
+Il ne doit exister qu’un seul <main> par page.
+
+<section>
+
+Regroupe un ensemble cohérent d’informations : par exemple une “Présentation”, “Galerie”, “Fiche technique”…
+Pense-le comme un sous-bloc logique.
+
+<article>
+
+Utilisé pour du contenu autonome : un article de blog, une fiche de voiture, une annonce.
+Un <article> peut vivre seul (et être partagé indépendamment).
+
+<aside>
+
+Pour les informations secondaires : liens utiles, citations, publicités, encadrés.
+Dans un garage virtuel, ce serait la zone “Fun facts” ou “Historique de la marque”.
+
+<footer>
+
+Le bas de page : copyright, contact, liens vers les réseaux, etc.
+Il peut aussi apparaître dans un article (ex. : signature de l’auteur).
+
+🧱 Étape 2 – Construire ton squelette
+
+Dans ton dossier garage/, garde ton index.html et ajoute deux nouveaux fichiers :
+
+models.html
+
+contact.html
+
+Puis, modifie ton index.html ainsi :
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Garage Virtuel</title>
+</head>
+<body>
+
+  <header>
+    <h1>Mon Garage Virtuel</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="models.html">Modèles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Bienvenue</h2>
+      <p>Voici l’endroit où je présente mes voitures préférées.</p>
+    </section>
+
+    <section>
+      <h2>Ma voiture actuelle</h2>
+      <img src="images/mx5.jpg" alt="Mazda MX-5 ND rouge garée au soleil" width="400">
+      <p>Une compagne fidèle et élégante, symbole du plaisir de conduite.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kentin Parent-Bert – Mon Garage Virtuel</p>
+  </footer>
+
+</body>
+</html>
+
+
+(Les fichiers models.html et contact.html auront la même structure de base, mais avec du contenu différent. Tu pourras les remplir ensuite.)
+
+🔍 Étape 3 – Teste les liens
+
+Ouvre index.html dans ton navigateur.
+
+Clique sur “Modèles” et “Contact” : tu devrais naviguer entre les pages.
+
+Si tu veux revenir à l’accueil depuis une autre page, assure-toi que les liens du <nav> fonctionnent bien.
+
+💡 À retenir
+
+Ces balises rendent ton code plus lisible, mieux référencé et plus accessible.
+
+Tu peux toujours les styliser plus tard avec le CSS ; pour l’instant, elles ne changent que la logique.
+
+Le navigateur lit ton HTML comme un plan hiérarchique : il comprend qu’il y a une tête, un corps, un pied.
+
+🧠 Synthèse de ton Jour 2
+
+Compétences acquises :
+
+✅ Compréhension des balises de structure (header, nav, main, footer, etc.)
+
+✅ Création d’un mini-site multi-pages relié par navigation interne
+
+✅ Usage correct de la hiérarchie de titres
+
+=======
+🎯 Objectif du jour
+
+Découvrir les balises de structure sémantique du HTML 5.
+
+Créer un site comportant plusieurs sections distinctes : en-tête, navigation, contenu principal et pied de page.
+
+Apprendre à relier plusieurs pages entre elles (comme un petit site).
+
+🧩 Étape 1 – Les nouvelles balises de structure
+
+Avant, on utilisait souvent seulement <div>.
+Mais aujourd’hui, HTML 5 offre des balises plus expressives : elles décrivent leur rôle dans la page.
+Voici celles que tu vas manipuler :
+
+<header>
+
+Contient le haut de la page : titre, logo, barre de navigation…
+Comparable au bandeau supérieur d’un tableau de bord.
+
+<nav>
+
+Section dédiée à la navigation : regroupe les liens internes (ex. : “Accueil”, “Modèles”, “Contact”).
+Elle aide aussi Google à comprendre la structure du site.
+
+<main>
+
+Le cœur du contenu : tout ce qui est unique à la page actuelle (articles, sections, photos…).
+Il ne doit exister qu’un seul <main> par page.
+
+<section>
+
+Regroupe un ensemble cohérent d’informations : par exemple une “Présentation”, “Galerie”, “Fiche technique”…
+Pense-le comme un sous-bloc logique.
+
+<article>
+
+Utilisé pour du contenu autonome : un article de blog, une fiche de voiture, une annonce.
+Un <article> peut vivre seul (et être partagé indépendamment).
+
+<aside>
+
+Pour les informations secondaires : liens utiles, citations, publicités, encadrés.
+Dans un garage virtuel, ce serait la zone “Fun facts” ou “Historique de la marque”.
+
+<footer>
+
+Le bas de page : copyright, contact, liens vers les réseaux, etc.
+Il peut aussi apparaître dans un article (ex. : signature de l’auteur).
+
+🧱 Étape 2 – Construire ton squelette
+
+Dans ton dossier garage/, garde ton index.html et ajoute deux nouveaux fichiers :
+
+models.html
+
+contact.html
+
+Puis, modifie ton index.html ainsi :
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Garage Virtuel</title>
+</head>
+<body>
+
+  <header>
+    <h1>Mon Garage Virtuel</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="models.html">Modèles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Bienvenue</h2>
+      <p>Voici l’endroit où je présente mes voitures préférées.</p>
+    </section>
+
+    <section>
+      <h2>Ma voiture actuelle</h2>
+      <img src="images/mx5.jpg" alt="Mazda MX-5 ND rouge garée au soleil" width="400">
+      <p>Une compagne fidèle et élégante, symbole du plaisir de conduite.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kentin Parent-Bert – Mon Garage Virtuel</p>
+  </footer>
+
+</body>
+</html>
+
+
+(Les fichiers models.html et contact.html auront la même structure de base, mais avec du contenu différent. Tu pourras les remplir ensuite.)
+
+🔍 Étape 3 – Teste les liens
+
+Ouvre index.html dans ton navigateur.
+
+Clique sur “Modèles” et “Contact” : tu devrais naviguer entre les pages.
+
+Si tu veux revenir à l’accueil depuis une autre page, assure-toi que les liens du <nav> fonctionnent bien.
+
+💡 À retenir
+
+Ces balises rendent ton code plus lisible, mieux référencé et plus accessible.
+
+Tu peux toujours les styliser plus tard avec le CSS ; pour l’instant, elles ne changent que la logique.
+
+Le navigateur lit ton HTML comme un plan hiérarchique : il comprend qu’il y a une tête, un corps, un pied.
+
+🧠 Synthèse de ton Jour 2
+
+Compétences acquises :
+
+✅ Compréhension des balises de structure (header, nav, main, footer, etc.)
+
+✅ Création d’un mini-site multi-pages relié par navigation interne
+
+✅ Usage correct de la hiérarchie de titres
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+✅ Respect des bonnes pratiques d’accessibilité (lang, alt, rel…)

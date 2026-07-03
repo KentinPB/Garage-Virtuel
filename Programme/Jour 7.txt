@@ -1,0 +1,242 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Comprendre ce qu’est le DOM.
+
+Apprendre à sélectionner, modifier et créer des éléments HTML avec JavaScript.
+
+Gérer des événements utilisateurs : clics, survols, saisies.
+
+Construire ton premier mini-script interactif complet.
+
+🧩 Étape 1 – Le DOM expliqué simplement
+
+Le DOM est une représentation vivante du code HTML sous forme d’arbre.
+Chaque balise devient un nœud (node), que tu peux sélectionner, modifier, déplacer, ou supprimer.
+
+Exemple :
+
+<p id="intro">Bienvenue dans mon garage virtuel.</p>
+
+
+Dans ton script :
+
+let paragraphe = document.getElementById("intro");
+paragraphe.textContent = "Bonjour Kentin, le moteur est prêt à démarrer !";
+
+
+Tu viens de modifier le texte d’un élément du DOM sans toucher au HTML.
+C’est un peu comme si JavaScript ouvrait le capot de la page et tournait les vis en direct.
+
+⚙️ Étape 2 – Sélecteurs modernes du DOM
+
+Voici les plus courants :
+
+document.getElementById("id");        // sélectionne un élément par son ID
+document.getElementsByClassName("nomClasse"); // sélectionne tous les éléments de cette classe
+document.querySelector("p");          // sélectionne le premier <p>
+document.querySelectorAll(".voiture"); // sélectionne tous les éléments avec la classe .voiture
+
+
+Tu peux ensuite modifier leur contenu ou leur style :
+
+let titre = document.querySelector("h2");
+titre.style.color = "red";
+titre.textContent = "Mes voitures préférées";
+
+🧠 Étape 3 – Les événements utilisateurs
+
+Tu as déjà vu addEventListener("click", ...).
+Voici d’autres exemples :
+
+element.addEventListener("mouseover", fonction);  // Survol
+element.addEventListener("mouseout", fonction);   // Fin du survol
+element.addEventListener("input", fonction);      // Saisie utilisateur
+
+
+Exemple concret :
+
+let image = document.querySelector("img");
+
+image.addEventListener("mouseover", () => {
+  image.style.transform = "scale(1.1)";
+});
+
+image.addEventListener("mouseout", () => {
+  image.style.transform = "scale(1)";
+});
+
+
+👉 Résultat : ton image “respire” quand on la survole.
+
+⚡ Étape 4 – Créer et insérer un nouvel élément
+
+Tu peux générer du contenu depuis JavaScript :
+
+let nouvelleVoiture = document.createElement("div");
+nouvelleVoiture.textContent = "Mazda RX-8 (nouvelle entrée)";
+nouvelleVoiture.classList.add("voiture");
+
+document.querySelector(".garage-container").appendChild(nouvelleVoiture);
+
+
+→ Tu viens de créer une nouvelle carte dans ton garage, uniquement par script.
+Le DOM est modifié en direct.
+
+🧱 Étape 5 – Exemple complet : mini-interaction
+
+Dans ton fichier projets.html, ajoute :
+
+<button id="ajouter">Ajouter une nouvelle voiture</button>
+<div class="garage-container"></div>
+
+
+Et dans script.js :
+
+let bouton = document.getElementById("ajouter");
+let garage = document.querySelector(".garage-container");
+
+bouton.addEventListener("click", () => {
+  let nouvelle = document.createElement("div");
+  nouvelle.classList.add("voiture");
+  nouvelle.textContent = "Nouvelle voiture ajoutée ! 🚗";
+  garage.appendChild(nouvelle);
+});
+
+
+→ Chaque clic sur le bouton ajoute une nouvelle “voiture” à ta liste.
+Félicitations, tu viens de créer ton premier script génératif !
+
+🚀 Étape 6 – Résumé
+
+Le DOM est la représentation en mémoire du HTML.
+
+On peut sélectionner, modifier, créer ou supprimer des éléments.
+
+Les événements (click, mouseover, input) permettent de réagir aux actions de l’utilisateur.
+
+Tu sais maintenant ajouter du contenu dynamiquement.
+
+Tu es passé du HTML statique à une page vivante et interactive.
+=======
+🎯 Objectif du jour
+
+Comprendre ce qu’est le DOM.
+
+Apprendre à sélectionner, modifier et créer des éléments HTML avec JavaScript.
+
+Gérer des événements utilisateurs : clics, survols, saisies.
+
+Construire ton premier mini-script interactif complet.
+
+🧩 Étape 1 – Le DOM expliqué simplement
+
+Le DOM est une représentation vivante du code HTML sous forme d’arbre.
+Chaque balise devient un nœud (node), que tu peux sélectionner, modifier, déplacer, ou supprimer.
+
+Exemple :
+
+<p id="intro">Bienvenue dans mon garage virtuel.</p>
+
+
+Dans ton script :
+
+let paragraphe = document.getElementById("intro");
+paragraphe.textContent = "Bonjour Kentin, le moteur est prêt à démarrer !";
+
+
+Tu viens de modifier le texte d’un élément du DOM sans toucher au HTML.
+C’est un peu comme si JavaScript ouvrait le capot de la page et tournait les vis en direct.
+
+⚙️ Étape 2 – Sélecteurs modernes du DOM
+
+Voici les plus courants :
+
+document.getElementById("id");        // sélectionne un élément par son ID
+document.getElementsByClassName("nomClasse"); // sélectionne tous les éléments de cette classe
+document.querySelector("p");          // sélectionne le premier <p>
+document.querySelectorAll(".voiture"); // sélectionne tous les éléments avec la classe .voiture
+
+
+Tu peux ensuite modifier leur contenu ou leur style :
+
+let titre = document.querySelector("h2");
+titre.style.color = "red";
+titre.textContent = "Mes voitures préférées";
+
+🧠 Étape 3 – Les événements utilisateurs
+
+Tu as déjà vu addEventListener("click", ...).
+Voici d’autres exemples :
+
+element.addEventListener("mouseover", fonction);  // Survol
+element.addEventListener("mouseout", fonction);   // Fin du survol
+element.addEventListener("input", fonction);      // Saisie utilisateur
+
+
+Exemple concret :
+
+let image = document.querySelector("img");
+
+image.addEventListener("mouseover", () => {
+  image.style.transform = "scale(1.1)";
+});
+
+image.addEventListener("mouseout", () => {
+  image.style.transform = "scale(1)";
+});
+
+
+👉 Résultat : ton image “respire” quand on la survole.
+
+⚡ Étape 4 – Créer et insérer un nouvel élément
+
+Tu peux générer du contenu depuis JavaScript :
+
+let nouvelleVoiture = document.createElement("div");
+nouvelleVoiture.textContent = "Mazda RX-8 (nouvelle entrée)";
+nouvelleVoiture.classList.add("voiture");
+
+document.querySelector(".garage-container").appendChild(nouvelleVoiture);
+
+
+→ Tu viens de créer une nouvelle carte dans ton garage, uniquement par script.
+Le DOM est modifié en direct.
+
+🧱 Étape 5 – Exemple complet : mini-interaction
+
+Dans ton fichier projets.html, ajoute :
+
+<button id="ajouter">Ajouter une nouvelle voiture</button>
+<div class="garage-container"></div>
+
+
+Et dans script.js :
+
+let bouton = document.getElementById("ajouter");
+let garage = document.querySelector(".garage-container");
+
+bouton.addEventListener("click", () => {
+  let nouvelle = document.createElement("div");
+  nouvelle.classList.add("voiture");
+  nouvelle.textContent = "Nouvelle voiture ajoutée ! 🚗";
+  garage.appendChild(nouvelle);
+});
+
+
+→ Chaque clic sur le bouton ajoute une nouvelle “voiture” à ta liste.
+Félicitations, tu viens de créer ton premier script génératif !
+
+🚀 Étape 6 – Résumé
+
+Le DOM est la représentation en mémoire du HTML.
+
+On peut sélectionner, modifier, créer ou supprimer des éléments.
+
+Les événements (click, mouseover, input) permettent de réagir aux actions de l’utilisateur.
+
+Tu sais maintenant ajouter du contenu dynamiquement.
+
+Tu es passé du HTML statique à une page vivante et interactive.
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+C’est une étape cruciale dans ton apprentissage : à partir d’ici, tu peux construire de vrais mini-programmes web.

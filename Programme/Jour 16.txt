@@ -1,0 +1,240 @@
+<<<<<<< HEAD
+🎯 Objectifs du Jour 16
+
+À la fin de cette leçon, tu dois être capable de :
+
+✅ Expliquer qui fait quoi dans ton application
+
+✅ Comprendre la différence entre :
+
+données (garage)
+
+logique (filtrer, ajouter, supprimer)
+
+affichage (afficherGarage)
+
+✅ Modifier ton projet sans tout casser
+
+✅ Ajouter plus tard :
+
+moteur
+
+année
+
+puissance
+
+tri (A → Z, par pays, etc.)
+
+👉 En clair : ton Garage Virtuel devient une vraie mini-application, pas juste une page web.
+
+🧠 Ce que ton projet contient déjà (et c’est excellent)
+
+Tu as actuellement :
+
+1️⃣ Les données
+let garage = [];
+
+
+👉 Source de vérité unique
+Tout part de là.
+
+2️⃣ L’affichage
+afficherGarage(liste = garage)
+
+
+👉 Cette fonction :
+
+ne décide rien
+
+ne filtre rien
+
+ne modifie aucune donnée
+
+Elle AFFICHE uniquement ce qu’on lui donne.
+
+💡 C’est EXACTEMENT comme il faut.
+
+3️⃣ La logique métier
+filtrerGarage()
+ajouterVoiture()
+supprimerSelection()
+viderGarage()
+
+
+👉 Ces fonctions :
+
+travaillent sur les données
+
+décident quoi montrer
+
+appellent ensuite afficherGarage(...)
+
+4️⃣ Les événements
+change
+input
+click
+submit
+load
+
+
+👉 Ils déclenchent la logique, sans la contenir.
+
+💥 Conclusion importante (note-la)
+
+👉 Ton code est déjà structuré comme un vrai projet de développeur web.
+
+🧩 Le vrai sujet du Jour 16
+
+Tu t’es posé LA bonne question 👇
+
+« Est-ce que je modifie ma fonction existante ou j’en ajoute une autre ? »
+
+🧠 Règle d’or (très importante)
+
+❌ On ne modifie PAS une fonction qui marche
+✅ On ajoute une couche au-dessus
+
+Et devine quoi ?
+👉 C’est exactement ce que tu as fait avec :
+
+filtrerGarage()
+
+afficherGarage(resultat)
+
+👏👏👏
+
+🔍 Mini schéma mental (garde-le)
+[Données] garage
+     ↓
+[Logique] filtrer / ajouter / supprimer
+     ↓
+[Affichage] afficherGarage(liste)
+     ↓
+[DOM] cartes visibles
+
+
+Si tu respectes ça, rien ne casse jamais.
+
+🧪 Mini-diagnostic (question 1 — une seule)
+
+=======
+🎯 Objectifs du Jour 16
+
+À la fin de cette leçon, tu dois être capable de :
+
+✅ Expliquer qui fait quoi dans ton application
+
+✅ Comprendre la différence entre :
+
+données (garage)
+
+logique (filtrer, ajouter, supprimer)
+
+affichage (afficherGarage)
+
+✅ Modifier ton projet sans tout casser
+
+✅ Ajouter plus tard :
+
+moteur
+
+année
+
+puissance
+
+tri (A → Z, par pays, etc.)
+
+👉 En clair : ton Garage Virtuel devient une vraie mini-application, pas juste une page web.
+
+🧠 Ce que ton projet contient déjà (et c’est excellent)
+
+Tu as actuellement :
+
+1️⃣ Les données
+let garage = [];
+
+
+👉 Source de vérité unique
+Tout part de là.
+
+2️⃣ L’affichage
+afficherGarage(liste = garage)
+
+
+👉 Cette fonction :
+
+ne décide rien
+
+ne filtre rien
+
+ne modifie aucune donnée
+
+Elle AFFICHE uniquement ce qu’on lui donne.
+
+💡 C’est EXACTEMENT comme il faut.
+
+3️⃣ La logique métier
+filtrerGarage()
+ajouterVoiture()
+supprimerSelection()
+viderGarage()
+
+
+👉 Ces fonctions :
+
+travaillent sur les données
+
+décident quoi montrer
+
+appellent ensuite afficherGarage(...)
+
+4️⃣ Les événements
+change
+input
+click
+submit
+load
+
+
+👉 Ils déclenchent la logique, sans la contenir.
+
+💥 Conclusion importante (note-la)
+
+👉 Ton code est déjà structuré comme un vrai projet de développeur web.
+
+🧩 Le vrai sujet du Jour 16
+
+Tu t’es posé LA bonne question 👇
+
+« Est-ce que je modifie ma fonction existante ou j’en ajoute une autre ? »
+
+🧠 Règle d’or (très importante)
+
+❌ On ne modifie PAS une fonction qui marche
+✅ On ajoute une couche au-dessus
+
+Et devine quoi ?
+👉 C’est exactement ce que tu as fait avec :
+
+filtrerGarage()
+
+afficherGarage(resultat)
+
+👏👏👏
+
+🔍 Mini schéma mental (garde-le)
+[Données] garage
+     ↓
+[Logique] filtrer / ajouter / supprimer
+     ↓
+[Affichage] afficherGarage(liste)
+     ↓
+[DOM] cartes visibles
+
+
+Si tu respectes ça, rien ne casse jamais.
+
+🧪 Mini-diagnostic (question 1 — une seule)
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Allez senpai, petite question pour vérifier que tout est bien clair 

@@ -1,0 +1,244 @@
+<<<<<<< HEAD
+🎯 Objectifs du Jour 14 : le stockage local (localStorage)
+
+À la fin de cette leçon, tu sauras :
+
+Enregistrer des données localement dans le navigateur (sans serveur).
+
+Récupérer et réafficher ces données au rechargement de la page.
+
+Supprimer ou mettre à jour des informations enregistrées.
+
+Convertir des objets en texte (et inversement) grâce à JSON.
+
+🧠 1. Qu’est-ce que localStorage ?
+
+Le localStorage est un petit espace de stockage fourni par ton navigateur.
+Il conserve les données même après avoir fermé et rouvert le site.
+
+⚙️ Contrairement aux cookies :
+
+Il ne s’envoie pas au serveur.
+
+Il peut stocker environ 5 à 10 Mo.
+
+Il ne disparaît pas sauf si l’utilisateur le supprime manuellement.
+
+🧩 2. Les commandes essentielles
+
+Voici les trois méthodes principales :
+
+// Ajouter ou modifier une donnée
+localStorage.setItem("cle", "valeur");
+
+// Récupérer une donnée
+let valeur = localStorage.getItem("cle");
+
+// Supprimer une donnée
+localStorage.removeItem("cle");
+
+// Supprimer tout le stockage
+localStorage.clear();
+
+🚗 3. Exemple concret avec ton garage
+
+Tu veux sauvegarder le contenu de ton tableau garage :
+
+localStorage.setItem("garage", JSON.stringify(garage));
+
+
+💡 JSON.stringify() transforme ton tableau d’objets en texte,
+car localStorage ne peut stocker que des chaînes de caractères.
+
+Puis, quand la page est rechargée :
+
+let donneesSauvegardees = localStorage.getItem("garage");
+
+if (donneesSauvegardees) {
+  garage = JSON.parse(donneesSauvegardees); // retransforme en tableau
+  afficherGarage(); // réaffiche tout à l’écran
+}
+
+
+💡 JSON.parse() fait l’inverse : il transforme le texte sauvegardé en tableau utilisable.
+
+🧱 4. Application directe à ton projet
+
+Tu peux modifier ton script comme ceci :
+
+let garage = [];
+
+function afficherGarage() {
+  console.log("=== Garage Virtuel ===");
+  document.querySelector(".garage-container").innerHTML = ""; // vide le contenu
+
+  for (let voiture of garage) {
+    let nouvelle = document.createElement("div");
+    nouvelle.classList.add("voiture");
+    nouvelle.innerHTML = `
+      <img src="${voiture.image}" alt="${voiture.nom}">
+      <h3>${voiture.nom}</h3>
+      <p>${voiture.description}</p>
+    `;
+    document.querySelector(".garage-container").appendChild(nouvelle);
+  }
+}
+
+function ajouterVoiture() {
+  let nom = prompt("Nom de la voiture :");
+  let image = prompt("URL de l'image :");
+  let description = prompt("Description :");
+
+  let voiture = { nom, image, description };
+  garage.push(voiture);
+  localStorage.setItem("garage", JSON.stringify(garage)); // sauvegarde
+  afficherGarage();
+}
+
+window.addEventListener("load", () => {
+  let sauvegarde = localStorage.getItem("garage");
+  if (sauvegarde) {
+    garage = JSON.parse(sauvegarde);
+    afficherGarage();
+  }
+});
+
+let bouton = document.getElementById("ajouter");
+if (bouton) bouton.addEventListener("click", ajouterVoiture);
+
+
+💡 Ainsi, ton garage reste intact même après avoir fermé le navigateur.
+C’est ton premier système de persistance locale — sans base de données !
+
+🧩 5. Exercice pratique
+
+Fais ce petit test dans ton projet :
+
+Ajoute quelques voitures.
+
+Recharge ta page.
+
+Vérifie dans la console du navigateur → Application → Local Storage.
+=======
+🎯 Objectifs du Jour 14 : le stockage local (localStorage)
+
+À la fin de cette leçon, tu sauras :
+
+Enregistrer des données localement dans le navigateur (sans serveur).
+
+Récupérer et réafficher ces données au rechargement de la page.
+
+Supprimer ou mettre à jour des informations enregistrées.
+
+Convertir des objets en texte (et inversement) grâce à JSON.
+
+🧠 1. Qu’est-ce que localStorage ?
+
+Le localStorage est un petit espace de stockage fourni par ton navigateur.
+Il conserve les données même après avoir fermé et rouvert le site.
+
+⚙️ Contrairement aux cookies :
+
+Il ne s’envoie pas au serveur.
+
+Il peut stocker environ 5 à 10 Mo.
+
+Il ne disparaît pas sauf si l’utilisateur le supprime manuellement.
+
+🧩 2. Les commandes essentielles
+
+Voici les trois méthodes principales :
+
+// Ajouter ou modifier une donnée
+localStorage.setItem("cle", "valeur");
+
+// Récupérer une donnée
+let valeur = localStorage.getItem("cle");
+
+// Supprimer une donnée
+localStorage.removeItem("cle");
+
+// Supprimer tout le stockage
+localStorage.clear();
+
+🚗 3. Exemple concret avec ton garage
+
+Tu veux sauvegarder le contenu de ton tableau garage :
+
+localStorage.setItem("garage", JSON.stringify(garage));
+
+
+💡 JSON.stringify() transforme ton tableau d’objets en texte,
+car localStorage ne peut stocker que des chaînes de caractères.
+
+Puis, quand la page est rechargée :
+
+let donneesSauvegardees = localStorage.getItem("garage");
+
+if (donneesSauvegardees) {
+  garage = JSON.parse(donneesSauvegardees); // retransforme en tableau
+  afficherGarage(); // réaffiche tout à l’écran
+}
+
+
+💡 JSON.parse() fait l’inverse : il transforme le texte sauvegardé en tableau utilisable.
+
+🧱 4. Application directe à ton projet
+
+Tu peux modifier ton script comme ceci :
+
+let garage = [];
+
+function afficherGarage() {
+  console.log("=== Garage Virtuel ===");
+  document.querySelector(".garage-container").innerHTML = ""; // vide le contenu
+
+  for (let voiture of garage) {
+    let nouvelle = document.createElement("div");
+    nouvelle.classList.add("voiture");
+    nouvelle.innerHTML = `
+      <img src="${voiture.image}" alt="${voiture.nom}">
+      <h3>${voiture.nom}</h3>
+      <p>${voiture.description}</p>
+    `;
+    document.querySelector(".garage-container").appendChild(nouvelle);
+  }
+}
+
+function ajouterVoiture() {
+  let nom = prompt("Nom de la voiture :");
+  let image = prompt("URL de l'image :");
+  let description = prompt("Description :");
+
+  let voiture = { nom, image, description };
+  garage.push(voiture);
+  localStorage.setItem("garage", JSON.stringify(garage)); // sauvegarde
+  afficherGarage();
+}
+
+window.addEventListener("load", () => {
+  let sauvegarde = localStorage.getItem("garage");
+  if (sauvegarde) {
+    garage = JSON.parse(sauvegarde);
+    afficherGarage();
+  }
+});
+
+let bouton = document.getElementById("ajouter");
+if (bouton) bouton.addEventListener("click", ajouterVoiture);
+
+
+💡 Ainsi, ton garage reste intact même après avoir fermé le navigateur.
+C’est ton premier système de persistance locale — sans base de données !
+
+🧩 5. Exercice pratique
+
+Fais ce petit test dans ton projet :
+
+Ajoute quelques voitures.
+
+Recharge ta page.
+
+Vérifie dans la console du navigateur → Application → Local Storage.
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Tu verras ta clé "garage" avec tout ton tableau d’objets dedans.

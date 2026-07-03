@@ -1,0 +1,320 @@
+<<<<<<< HEAD
+🧭 Objectifs du jour
+
+À la fin de cette leçon, tu sauras :
+
+Créer un formulaire HTML correctement structuré.
+
+Récupérer les valeurs saisies par l’utilisateur via JavaScript.
+
+Empêcher le rechargement automatique du formulaire (comportement par défaut du navigateur).
+
+Afficher les résultats de manière dynamique dans ta page.
+
+Ajouter une vérification simple (ex. : champs vides, format d’email, etc.).
+
+🧩 1. Créer un formulaire en HTML
+
+Un formulaire est défini par la balise <form> et contient des champs de saisie (<input>, <textarea>, <select>, etc.)
+Chaque champ doit avoir un attribut name ou id, que JavaScript utilisera pour le retrouver.
+
+Exemple de base :
+
+<form id="contactForm">
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" placeholder="Votre nom">
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" placeholder="Votre email">
+
+  <label for="message">Message :</label>
+  <textarea id="message" placeholder="Votre message ici..."></textarea>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+⚙️ 2. Récupérer les données en JavaScript
+
+Pour récupérer ce que l’utilisateur tape, on écoute l’événement “submit” du formulaire :
+
+let form = document.getElementById("contactForm");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // empêche le rechargement de la page
+
+  let nom = document.getElementById("nom").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  console.log("Nom :", nom);
+  console.log("Email :", email);
+  console.log("Message :", message);
+});
+
+
+🧠 Explication :
+
+.value permet de récupérer la valeur saisie dans chaque champ.
+
+event.preventDefault() empêche le comportement par défaut du formulaire (le rechargement de la page).
+
+📦 3. Afficher dynamiquement le résultat
+
+Tu peux directement insérer les données de l’utilisateur dans ta page sans rechargement :
+
+let resultat = document.createElement("p");
+resultat.textContent = `Merci ${nom}, votre message a bien été reçu !`;
+document.body.appendChild(resultat);
+
+
+Ton site devient ainsi interactif : l’utilisateur agit, et la page réagit sans quitter l’écran.
+
+🔒 4. Ajouter une vérification simple
+
+Avant d’envoyer ou d’afficher les données, il faut s’assurer que les champs ne sont pas vides :
+
+if (nom === "" || email === "" || message === "") {
+  alert("Veuillez remplir tous les champs !");
+  return; // arrête la fonction ici
+}
+
+
+Et pour vérifier un format d’email :
+
+if (!email.includes("@")) {
+  alert("Adresse email invalide !");
+  return;
+}
+
+
+C’est ce qu’on appelle la validation côté client.
+
+🧰 5. Exemple complet – Formulaire interactif
+
+Voici un petit formulaire prêt à l’emploi (à tester dans ton projet) :
+
+<form id="contactForm">
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" placeholder="Votre nom">
+  <label for="email">Email :</label>
+  <input type="email" id="email" placeholder="Votre email">
+  <label for="message">Message :</label>
+  <textarea id="message" placeholder="Votre message ici..."></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+
+<p id="confirmation"></p>
+
+
+Et le JavaScript associé :
+
+let form = document.getElementById("contactForm");
+let confirmation = document.getElementById("confirmation");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let nom = document.getElementById("nom").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  if (!nom || !email || !message) {
+    confirmation.textContent = "❌ Tous les champs doivent être remplis.";
+    confirmation.style.color = "red";
+  } else {
+    confirmation.textContent = `✅ Merci ${nom}, votre message a bien été enregistré !`;
+    confirmation.style.color = "limegreen";
+    form.reset(); // remet à zéro les champs
+  }
+});
+
+
+Ce code :
+
+empêche le rechargement automatique,
+
+récupère les valeurs saisies,
+
+vérifie les champs,
+
+et affiche une réponse personnalisée.
+
+💡 Mini-exercice :
+
+Crée un mini formulaire dans ta page “Contact” avec :
+
+un champ Nom
+
+un champ Email
+
+un champ Modèle préféré (texte)
+
+un bouton Envoyer
+
+Lorsque l’utilisateur clique sur “Envoyer”, ton script doit :
+
+vérifier que tous les champs sont remplis ;
+
+afficher un message :
+
+=======
+🧭 Objectifs du jour
+
+À la fin de cette leçon, tu sauras :
+
+Créer un formulaire HTML correctement structuré.
+
+Récupérer les valeurs saisies par l’utilisateur via JavaScript.
+
+Empêcher le rechargement automatique du formulaire (comportement par défaut du navigateur).
+
+Afficher les résultats de manière dynamique dans ta page.
+
+Ajouter une vérification simple (ex. : champs vides, format d’email, etc.).
+
+🧩 1. Créer un formulaire en HTML
+
+Un formulaire est défini par la balise <form> et contient des champs de saisie (<input>, <textarea>, <select>, etc.)
+Chaque champ doit avoir un attribut name ou id, que JavaScript utilisera pour le retrouver.
+
+Exemple de base :
+
+<form id="contactForm">
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" placeholder="Votre nom">
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" placeholder="Votre email">
+
+  <label for="message">Message :</label>
+  <textarea id="message" placeholder="Votre message ici..."></textarea>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+⚙️ 2. Récupérer les données en JavaScript
+
+Pour récupérer ce que l’utilisateur tape, on écoute l’événement “submit” du formulaire :
+
+let form = document.getElementById("contactForm");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // empêche le rechargement de la page
+
+  let nom = document.getElementById("nom").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  console.log("Nom :", nom);
+  console.log("Email :", email);
+  console.log("Message :", message);
+});
+
+
+🧠 Explication :
+
+.value permet de récupérer la valeur saisie dans chaque champ.
+
+event.preventDefault() empêche le comportement par défaut du formulaire (le rechargement de la page).
+
+📦 3. Afficher dynamiquement le résultat
+
+Tu peux directement insérer les données de l’utilisateur dans ta page sans rechargement :
+
+let resultat = document.createElement("p");
+resultat.textContent = `Merci ${nom}, votre message a bien été reçu !`;
+document.body.appendChild(resultat);
+
+
+Ton site devient ainsi interactif : l’utilisateur agit, et la page réagit sans quitter l’écran.
+
+🔒 4. Ajouter une vérification simple
+
+Avant d’envoyer ou d’afficher les données, il faut s’assurer que les champs ne sont pas vides :
+
+if (nom === "" || email === "" || message === "") {
+  alert("Veuillez remplir tous les champs !");
+  return; // arrête la fonction ici
+}
+
+
+Et pour vérifier un format d’email :
+
+if (!email.includes("@")) {
+  alert("Adresse email invalide !");
+  return;
+}
+
+
+C’est ce qu’on appelle la validation côté client.
+
+🧰 5. Exemple complet – Formulaire interactif
+
+Voici un petit formulaire prêt à l’emploi (à tester dans ton projet) :
+
+<form id="contactForm">
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" placeholder="Votre nom">
+  <label for="email">Email :</label>
+  <input type="email" id="email" placeholder="Votre email">
+  <label for="message">Message :</label>
+  <textarea id="message" placeholder="Votre message ici..."></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+
+<p id="confirmation"></p>
+
+
+Et le JavaScript associé :
+
+let form = document.getElementById("contactForm");
+let confirmation = document.getElementById("confirmation");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let nom = document.getElementById("nom").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  if (!nom || !email || !message) {
+    confirmation.textContent = "❌ Tous les champs doivent être remplis.";
+    confirmation.style.color = "red";
+  } else {
+    confirmation.textContent = `✅ Merci ${nom}, votre message a bien été enregistré !`;
+    confirmation.style.color = "limegreen";
+    form.reset(); // remet à zéro les champs
+  }
+});
+
+
+Ce code :
+
+empêche le rechargement automatique,
+
+récupère les valeurs saisies,
+
+vérifie les champs,
+
+et affiche une réponse personnalisée.
+
+💡 Mini-exercice :
+
+Crée un mini formulaire dans ta page “Contact” avec :
+
+un champ Nom
+
+un champ Email
+
+un champ Modèle préféré (texte)
+
+un bouton Envoyer
+
+Lorsque l’utilisateur clique sur “Envoyer”, ton script doit :
+
+vérifier que tous les champs sont remplis ;
+
+afficher un message :
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+“Merci [nom] ! Nous vous recontacterons bientôt à [email] au sujet de votre [modèle préféré]. 🚗”

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Mes Projets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/garage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+    <header>
+      <h1>Mon Garage Virtuel</h1>
+      <nav>
+       <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Ma Collection de Véhicules</h2>
+          <p>Découvrez l'ensemble de mes projets automobiles et autos de collection</p>
+        </div>
+      </section>
+
+      <!-- Section Filtres & Contrôles + Statistiques -->
+      <section class="filtres-section">
+        <!-- Barre de Statistiques intégrée -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-number" id="stat-total">0</div>
+            <div class="stat-label">Total</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-affichees">0</div>
+            <div class="stat-label">Affichées</div>
+          </div>
+        </div>
+
+        <div class="filtres-container">
+          <!-- Ligne 1 : Filtres principaux -->
+            <select id="filtre-pays" class="filtres-section">
+              <option value="">🌍 Tous les pays</option>
+            </select>
+
+            <select id="filtre-marque" class="filtres-section">
+              <option value="">🚗 Toutes les marques</option>
+            </select>
+
+            <input type="text" id="filtre-modele" class="filtres-section" placeholder="🔎 Rechercher un modèle..." list="filtre-modele-list">
+            <datalist id="filtre-modele-list"></datalist>
+          </div>
+
+          <!-- Ligne 2 : Actions -->
+          <div class="filtres-actions">
+            <button id="reset-filtre" class="btn-secondary">↻ Réinitialiser</button>
+            <button id="ajouter" class="btn-primary">➕ Ajouter une voiture</button>
+            <button id="mode-suppression" class="btn-danger">🗑️ Mode suppression</button>
+            <button id="supprimer-selection" class="btn-warning" style="display:none;">⚠️ Supprimer la sélection</button>
+            <button id="vider-garage" class="btn-critical" style="display:none;">🔥 Vider le garage</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conteneur du garage -->
+      <div class="garage-wrapper">
+        <div class="garage-container"></div>
+      </div>
+
+      <!-- Fenêtre modale d'ajout de voiture -->
+      <div id="modal-ajout" class="modal">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Ajouter une nouvelle voiture</h2>
+            <button class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="form-ajout">
+              <div class="modal-group">
+                <label for="marque">Marque :</label>
+                <input type="text" id="marque" list="marque-list" required placeholder="-- Sélectionnez une marque --">
+                <datalist id="marque-list"></datalist>
+              </div>
+            
+              <div class="modal-group">
+                <label for="modele">Modèle :</label>
+                <select id="modele" required disabled>
+                  <option value="">-- Choisissez d’abord une marque --</option>
+                </select>
+              </div>
+
+              <div class="modal-group">
+                <label for="image">URL de l'image :</label>
+                <input type="url" id="image" placeholder="https://..." required>              </div>
+
+              <div class="modal-group">
+                <label for="description">Description :</label>
+                <textarea id="description" placeholder="Parlez un peu du véhicule..." required></textarea>
+              </div>
+
+              <div class="modal-group">
+                <label for="fiche">Fiche technique :</label> 
+                <textarea id="fiche" placeholder="Ex: Moteur, puissance, 0-100 km/h..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Ajouter au garage</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" id="close-modal">Annuler</button>
+          </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <p><strong>&copy; 2024 Mon Garage Virtuel. Tous droits réservés.</strong></p>
+    </footer>
+
+    <script type="module" src="Scripts/main.js"></script>
+  </body>
+</html>

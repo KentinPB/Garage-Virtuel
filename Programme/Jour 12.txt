@@ -1,0 +1,232 @@
+<<<<<<< HEAD
+🎯 Jour 12 – Les événements clavier et souris avancés
+🚗 Objectifs du jour
+
+Comprendre les différents types d’événements liés à la souris et au clavier.
+
+Savoir les écouter et réagir via addEventListener.
+
+Manipuler les objets event pour obtenir des informations précises (position du curseur, touche pressée, etc.).
+
+Mettre en place des interactions plus dynamiques (détection de touches, mouvements, raccourcis…).
+
+🖱️ 1. Les événements souris
+
+Il existe plusieurs événements liés à la souris. Voici les plus courants :
+
+click → se déclenche lorsqu’on clique sur un élément.
+
+dblclick → double-clic.
+
+mouseover → quand le curseur entre sur un élément.
+
+mouseout → quand le curseur quitte un élément.
+
+mousemove → à chaque déplacement de la souris (souvent combiné avec les coordonnées X/Y).
+
+Exemple :
+
+let image = document.querySelector("img");
+
+image.addEventListener("mouseover", () => {
+  image.style.transform = "scale(1.1)";
+});
+
+image.addEventListener("mouseout", () => {
+  image.style.transform = "scale(1)";
+});
+
+
+👉 Ici, ton image "grossit" au survol et reprend sa taille d’origine quand la souris part.
+
+🎹 2. Les événements clavier
+
+Le clavier est une autre source d’interaction importante.
+Les plus courants sont :
+
+keydown → déclenché au moment où une touche est enfoncée.
+
+keyup → déclenché quand on relâche la touche.
+
+keypress → (désuet) : utilisé avant, mais désormais remplacé par keydown et keyup.
+
+Exemple :
+
+document.addEventListener("keydown", (event) => {
+  console.log("Touche pressée :", event.key);
+});
+
+
+👉 Ici, le navigateur affiche dans la console la touche appuyée.
+Si tu presses la flèche gauche, event.key vaudra "ArrowLeft".
+Pratique pour créer un mini-jeu ou un diaporama contrôlé au clavier.
+
+⚙️ 3. L’objet event
+
+Chaque fois qu’un événement se produit, le navigateur envoie un objet event à ta fonction.
+Cet objet contient plein d’informations utiles, par exemple :
+
+event.type → le type d’événement ("click", "keydown"...)
+
+event.target → l’élément HTML qui a déclenché l’événement
+
+event.key → la touche pressée (pour les événements clavier)
+
+event.clientX / event.clientY → position du curseur dans la fenêtre (pour la souris)
+
+Exemple :
+
+document.addEventListener("mousemove", (event) => {
+  console.log("Position X :", event.clientX, "Position Y :", event.clientY);
+});
+
+
+👉 Tu peux même t’en servir pour faire suivre un élément avec la souris (comme un effet de particules ou un curseur personnalisé).
+
+🧠 4. Exemple concret – mini interaction
+
+Regarde ce petit script qui combine clic + clavier + mouvement :
+
+let image = document.querySelector("img");
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") {
+    image.style.transform = "translateX(20px)";
+  } else if (event.key === "ArrowLeft") {
+    image.style.transform = "translateX(-20px)";
+  }
+});
+
+image.addEventListener("click", () => {
+  alert("Zoom sur la voiture !");
+});
+
+
+👉 Tu peux déplacer ton image de gauche à droite avec les flèches du clavier, et cliquer pour l’agrandir.
+Une première approche de la logique de contrôle d’objet, très utilisée dans les jeux ou interfaces interactives.
+
+🪄 5. À retenir
+
+Les événements permettent au JavaScript de réagir aux actions de l’utilisateur.
+
+addEventListener() est toujours la méthode la plus souple et propre.
+
+L’objet event est une mine d’informations.
+
+=======
+🎯 Jour 12 – Les événements clavier et souris avancés
+🚗 Objectifs du jour
+
+Comprendre les différents types d’événements liés à la souris et au clavier.
+
+Savoir les écouter et réagir via addEventListener.
+
+Manipuler les objets event pour obtenir des informations précises (position du curseur, touche pressée, etc.).
+
+Mettre en place des interactions plus dynamiques (détection de touches, mouvements, raccourcis…).
+
+🖱️ 1. Les événements souris
+
+Il existe plusieurs événements liés à la souris. Voici les plus courants :
+
+click → se déclenche lorsqu’on clique sur un élément.
+
+dblclick → double-clic.
+
+mouseover → quand le curseur entre sur un élément.
+
+mouseout → quand le curseur quitte un élément.
+
+mousemove → à chaque déplacement de la souris (souvent combiné avec les coordonnées X/Y).
+
+Exemple :
+
+let image = document.querySelector("img");
+
+image.addEventListener("mouseover", () => {
+  image.style.transform = "scale(1.1)";
+});
+
+image.addEventListener("mouseout", () => {
+  image.style.transform = "scale(1)";
+});
+
+
+👉 Ici, ton image "grossit" au survol et reprend sa taille d’origine quand la souris part.
+
+🎹 2. Les événements clavier
+
+Le clavier est une autre source d’interaction importante.
+Les plus courants sont :
+
+keydown → déclenché au moment où une touche est enfoncée.
+
+keyup → déclenché quand on relâche la touche.
+
+keypress → (désuet) : utilisé avant, mais désormais remplacé par keydown et keyup.
+
+Exemple :
+
+document.addEventListener("keydown", (event) => {
+  console.log("Touche pressée :", event.key);
+});
+
+
+👉 Ici, le navigateur affiche dans la console la touche appuyée.
+Si tu presses la flèche gauche, event.key vaudra "ArrowLeft".
+Pratique pour créer un mini-jeu ou un diaporama contrôlé au clavier.
+
+⚙️ 3. L’objet event
+
+Chaque fois qu’un événement se produit, le navigateur envoie un objet event à ta fonction.
+Cet objet contient plein d’informations utiles, par exemple :
+
+event.type → le type d’événement ("click", "keydown"...)
+
+event.target → l’élément HTML qui a déclenché l’événement
+
+event.key → la touche pressée (pour les événements clavier)
+
+event.clientX / event.clientY → position du curseur dans la fenêtre (pour la souris)
+
+Exemple :
+
+document.addEventListener("mousemove", (event) => {
+  console.log("Position X :", event.clientX, "Position Y :", event.clientY);
+});
+
+
+👉 Tu peux même t’en servir pour faire suivre un élément avec la souris (comme un effet de particules ou un curseur personnalisé).
+
+🧠 4. Exemple concret – mini interaction
+
+Regarde ce petit script qui combine clic + clavier + mouvement :
+
+let image = document.querySelector("img");
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") {
+    image.style.transform = "translateX(20px)";
+  } else if (event.key === "ArrowLeft") {
+    image.style.transform = "translateX(-20px)";
+  }
+});
+
+image.addEventListener("click", () => {
+  alert("Zoom sur la voiture !");
+});
+
+
+👉 Tu peux déplacer ton image de gauche à droite avec les flèches du clavier, et cliquer pour l’agrandir.
+Une première approche de la logique de contrôle d’objet, très utilisée dans les jeux ou interfaces interactives.
+
+🪄 5. À retenir
+
+Les événements permettent au JavaScript de réagir aux actions de l’utilisateur.
+
+addEventListener() est toujours la méthode la plus souple et propre.
+
+L’objet event est une mine d’informations.
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Combine les événements pour créer des expériences dynamiques (hover + clic + clavier = fluidité).

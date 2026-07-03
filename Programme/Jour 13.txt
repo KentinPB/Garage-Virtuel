@@ -1,0 +1,210 @@
+<<<<<<< HEAD
+🚗 Objectifs du jour
+
+Comprendre ce qu’est un tableau et comment il stocke plusieurs valeurs.
+
+Savoir parcourir un tableau avec des boucles (for, for...of, forEach).
+
+Découvrir les objets : structure clé/valeur, plus flexibles qu’un simple tableau.
+
+Savoir imbriquer les deux : des tableaux d’objets (comme une liste de voitures).
+
+Savoir accéder, modifier et afficher des données complexes.
+
+🧠 1. Les tableaux (Array)
+
+Un tableau permet de stocker plusieurs valeurs dans une seule variable :
+
+let voitures = ["Mazda RX-7", "Toyota Supra", "Nissan Skyline"];
+console.log(voitures[0]); // affiche "Mazda RX-7"
+console.log(voitures.length); // affiche 3
+
+
+Tu peux aussi ajouter ou retirer des éléments :
+
+voitures.push("Honda NSX"); // ajoute à la fin
+voitures.pop(); // retire le dernier
+
+
+Et pour parcourir tout le tableau :
+
+for (let i = 0; i < voitures.length; i++) {
+  console.log("Voiture :", voitures[i]);
+}
+
+
+Version plus moderne :
+
+for (let voiture of voitures) {
+  console.log(voiture);
+}
+
+🧩 2. Les objets (Object)
+
+Un objet stocke des informations liées sous forme de paires clé: valeur.
+C’est idéal pour décrire une voiture complète :
+
+let voiture = {
+  modele: "Mazda RX-7",
+  puissance: 276,
+  rare: true
+};
+
+console.log(voiture.modele); // "Mazda RX-7"
+console.log(voiture["puissance"]); // 276
+
+
+Tu peux aussi modifier ou ajouter une propriété :
+
+voiture.puissance = 300;
+voiture.couleur = "rouge";
+
+🚘 3. Tableaux d’objets (niveau professionnel)
+
+C’est là que tout prend sens :
+tu peux créer une collection complète de voitures, chacune décrite par un objet.
+
+let garage = [
+  { modele: "Mazda RX-7", puissance: 276 },
+  { modele: "Toyota Supra", puissance: 330 },
+  { modele: "Honda NSX", puissance: 290 }
+];
+
+for (let voiture of garage) {
+  console.log(`${voiture.modele} : ${voiture.puissance} ch`);
+}
+
+
+Tu peux aussi ajouter dynamiquement un nouvel objet :
+
+garage.push({ modele: "Nissan GT-R", puissance: 565 });
+
+🧮 4. Exemple pratique avec ton garage
+
+Voici un mini-script inspiré de ton projet :
+
+let garage = [
+  { modele: "Mazda RX-7", puissance: 276 },
+  { modele: "Toyota Supra", puissance: 330 }
+];
+
+function afficherGarage() {
+  console.log("=== Garage Virtuel ===");
+  for (let voiture of garage) {
+    console.log(`${voiture.modele} (${voiture.puissance} ch)`);
+  }
+}
+
+afficherGarage();
+
+
+Résultat dans la console :
+
+=== Garage Virtuel ===
+Mazda RX-7 (276 ch)
+=======
+🚗 Objectifs du jour
+
+Comprendre ce qu’est un tableau et comment il stocke plusieurs valeurs.
+
+Savoir parcourir un tableau avec des boucles (for, for...of, forEach).
+
+Découvrir les objets : structure clé/valeur, plus flexibles qu’un simple tableau.
+
+Savoir imbriquer les deux : des tableaux d’objets (comme une liste de voitures).
+
+Savoir accéder, modifier et afficher des données complexes.
+
+🧠 1. Les tableaux (Array)
+
+Un tableau permet de stocker plusieurs valeurs dans une seule variable :
+
+let voitures = ["Mazda RX-7", "Toyota Supra", "Nissan Skyline"];
+console.log(voitures[0]); // affiche "Mazda RX-7"
+console.log(voitures.length); // affiche 3
+
+
+Tu peux aussi ajouter ou retirer des éléments :
+
+voitures.push("Honda NSX"); // ajoute à la fin
+voitures.pop(); // retire le dernier
+
+
+Et pour parcourir tout le tableau :
+
+for (let i = 0; i < voitures.length; i++) {
+  console.log("Voiture :", voitures[i]);
+}
+
+
+Version plus moderne :
+
+for (let voiture of voitures) {
+  console.log(voiture);
+}
+
+🧩 2. Les objets (Object)
+
+Un objet stocke des informations liées sous forme de paires clé: valeur.
+C’est idéal pour décrire une voiture complète :
+
+let voiture = {
+  modele: "Mazda RX-7",
+  puissance: 276,
+  rare: true
+};
+
+console.log(voiture.modele); // "Mazda RX-7"
+console.log(voiture["puissance"]); // 276
+
+
+Tu peux aussi modifier ou ajouter une propriété :
+
+voiture.puissance = 300;
+voiture.couleur = "rouge";
+
+🚘 3. Tableaux d’objets (niveau professionnel)
+
+C’est là que tout prend sens :
+tu peux créer une collection complète de voitures, chacune décrite par un objet.
+
+let garage = [
+  { modele: "Mazda RX-7", puissance: 276 },
+  { modele: "Toyota Supra", puissance: 330 },
+  { modele: "Honda NSX", puissance: 290 }
+];
+
+for (let voiture of garage) {
+  console.log(`${voiture.modele} : ${voiture.puissance} ch`);
+}
+
+
+Tu peux aussi ajouter dynamiquement un nouvel objet :
+
+garage.push({ modele: "Nissan GT-R", puissance: 565 });
+
+🧮 4. Exemple pratique avec ton garage
+
+Voici un mini-script inspiré de ton projet :
+
+let garage = [
+  { modele: "Mazda RX-7", puissance: 276 },
+  { modele: "Toyota Supra", puissance: 330 }
+];
+
+function afficherGarage() {
+  console.log("=== Garage Virtuel ===");
+  for (let voiture of garage) {
+    console.log(`${voiture.modele} (${voiture.puissance} ch)`);
+  }
+}
+
+afficherGarage();
+
+
+Résultat dans la console :
+
+=== Garage Virtuel ===
+Mazda RX-7 (276 ch)
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Toyota Supra (330 ch)

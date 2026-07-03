@@ -1,0 +1,240 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Comprendre à quoi sert JavaScript dans une page web.
+
+Apprendre à intégrer un script à son site.
+
+Découvrir les bases de la syntaxe JS : variables, types, affichage, et interactions simples.
+
+Créer ton premier petit script dynamique.
+
+⚙️ Étape 1 – Qu’est-ce que JavaScript ?
+
+JavaScript (ou JS) est le langage de programmation du navigateur.
+Si HTML structure la page, et CSS la rend jolie, JavaScript la rend interactive.
+
+Il peut :
+
+Réagir aux actions de l’utilisateur (clic, survol, saisie…)
+
+Modifier le contenu du HTML en direct
+
+Gérer des animations ou des effets
+
+Communiquer avec des serveurs
+
+Exemple concret :
+Quand tu cliques sur un bouton et qu’un texte s’affiche, c’est JavaScript qui agit.
+
+💻 Étape 2 – Où écrire le JavaScript ?
+
+Trois manières existent :
+
+1. En ligne (évite à l’avenir, mais utile pour tester)
+<button onclick="alert('Salut Kentin !')">Clique ici</button>
+
+2. Dans une balise <script> à la fin du body :
+<script>
+  alert("Bienvenue dans ton premier script !");
+</script>
+
+3. Dans un fichier externe (meilleure méthode) :
+
+Crée un fichier script.js et lie-le dans ton HTML :
+
+<script src="script.js"></script>
+
+
+Le navigateur lira ton JavaScript à la fin du chargement de la page.
+
+🧩 Étape 3 – Variables et affichage
+
+Une variable sert à stocker une information temporaire.
+
+Exemples :
+
+let voiture = "Mazda RX-7";
+let puissance = 276;
+let estRare = true;
+
+
+Tu peux afficher leur contenu avec :
+
+console.log(voiture);
+
+
+ou même directement sur la page :
+
+document.write("Ma voiture préférée est " + voiture);
+
+🧮 Étape 4 – Petites manipulations
+
+Essaie ce petit script dans ton fichier script.js :
+
+let prenom = "Kentin";
+let voiture = "Mazda RX-7";
+let puissance = 276;
+
+console.log("Bonjour " + prenom + " !");
+console.log("Ta voiture préférée est la " + voiture + " de " + puissance + " chevaux !");
+
+
+Ouvre ensuite ta console dans le navigateur (F12 → onglet “Console”)
+→ Tu devrais voir tes messages s’afficher.
+
+⚡ Étape 5 – Interaction avec le HTML
+
+Tu peux sélectionner un élément HTML depuis ton script :
+
+<p id="presentation">Bienvenue dans mon garage virtuel.</p>
+<button id="changerTexte">Changer le texte</button>
+
+
+Puis, dans ton script.js :
+
+let bouton = document.getElementById("changerTexte");
+let texte = document.getElementById("presentation");
+
+bouton.addEventListener("click", function() {
+  texte.textContent = "Ton garage est désormais interactif, Kentin !";
+});
+
+
+→ En cliquant sur le bouton, le texte du paragraphe change.
+Tu viens de créer ta première interaction DOM (Document Object Model).
+
+🚗 Étape 6 – Résumé
+
+HTML : structure la page.
+
+CSS : habille la page.
+
+JS : la rend vivante.
+
+Tu sais maintenant :
+✅ créer une variable,
+✅ afficher des messages,
+✅ réagir à une action (clic).
+
+=======
+🎯 Objectif du jour
+
+Comprendre à quoi sert JavaScript dans une page web.
+
+Apprendre à intégrer un script à son site.
+
+Découvrir les bases de la syntaxe JS : variables, types, affichage, et interactions simples.
+
+Créer ton premier petit script dynamique.
+
+⚙️ Étape 1 – Qu’est-ce que JavaScript ?
+
+JavaScript (ou JS) est le langage de programmation du navigateur.
+Si HTML structure la page, et CSS la rend jolie, JavaScript la rend interactive.
+
+Il peut :
+
+Réagir aux actions de l’utilisateur (clic, survol, saisie…)
+
+Modifier le contenu du HTML en direct
+
+Gérer des animations ou des effets
+
+Communiquer avec des serveurs
+
+Exemple concret :
+Quand tu cliques sur un bouton et qu’un texte s’affiche, c’est JavaScript qui agit.
+
+💻 Étape 2 – Où écrire le JavaScript ?
+
+Trois manières existent :
+
+1. En ligne (évite à l’avenir, mais utile pour tester)
+<button onclick="alert('Salut Kentin !')">Clique ici</button>
+
+2. Dans une balise <script> à la fin du body :
+<script>
+  alert("Bienvenue dans ton premier script !");
+</script>
+
+3. Dans un fichier externe (meilleure méthode) :
+
+Crée un fichier script.js et lie-le dans ton HTML :
+
+<script src="script.js"></script>
+
+
+Le navigateur lira ton JavaScript à la fin du chargement de la page.
+
+🧩 Étape 3 – Variables et affichage
+
+Une variable sert à stocker une information temporaire.
+
+Exemples :
+
+let voiture = "Mazda RX-7";
+let puissance = 276;
+let estRare = true;
+
+
+Tu peux afficher leur contenu avec :
+
+console.log(voiture);
+
+
+ou même directement sur la page :
+
+document.write("Ma voiture préférée est " + voiture);
+
+🧮 Étape 4 – Petites manipulations
+
+Essaie ce petit script dans ton fichier script.js :
+
+let prenom = "Kentin";
+let voiture = "Mazda RX-7";
+let puissance = 276;
+
+console.log("Bonjour " + prenom + " !");
+console.log("Ta voiture préférée est la " + voiture + " de " + puissance + " chevaux !");
+
+
+Ouvre ensuite ta console dans le navigateur (F12 → onglet “Console”)
+→ Tu devrais voir tes messages s’afficher.
+
+⚡ Étape 5 – Interaction avec le HTML
+
+Tu peux sélectionner un élément HTML depuis ton script :
+
+<p id="presentation">Bienvenue dans mon garage virtuel.</p>
+<button id="changerTexte">Changer le texte</button>
+
+
+Puis, dans ton script.js :
+
+let bouton = document.getElementById("changerTexte");
+let texte = document.getElementById("presentation");
+
+bouton.addEventListener("click", function() {
+  texte.textContent = "Ton garage est désormais interactif, Kentin !";
+});
+
+
+→ En cliquant sur le bouton, le texte du paragraphe change.
+Tu viens de créer ta première interaction DOM (Document Object Model).
+
+🚗 Étape 6 – Résumé
+
+HTML : structure la page.
+
+CSS : habille la page.
+
+JS : la rend vivante.
+
+Tu sais maintenant :
+✅ créer une variable,
+✅ afficher des messages,
+✅ réagir à une action (clic).
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Ce sont les bases du dynamisme web.

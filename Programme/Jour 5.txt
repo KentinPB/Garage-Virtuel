@@ -1,0 +1,246 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Comprendre ce qu’est le responsive design.
+
+Découvrir les media queries.
+
+Apprendre à adapter la mise en page et la taille des éléments selon la largeur de l’écran.
+
+Préparer ton site à être consulté depuis n’importe quel appareil.
+
+🧩 Étape 1 – Qu’est-ce que le design responsive ?
+
+Un site responsive adapte automatiquement son affichage à l’espace disponible.
+Sans responsive : ton site est figé, tout devient minuscule sur mobile.
+Avec responsive : les éléments se réorganisent, les textes restent lisibles, les images se redimensionnent.
+
+La clé ? Les media queries, qui permettent de dire au navigateur :
+
+“Quand la largeur de l’écran est inférieure à X pixels, applique ces nouveaux styles.”
+
+⚙️ Étape 2 – Les media queries : la base
+
+La syntaxe générale :
+
+@media (max-width: 768px) {
+  /* Styles appliqués uniquement
+     quand la largeur de l’écran ≤ 768px */
+}
+
+
+On peut aussi utiliser :
+
+(min-width: 1024px) → pour les écrans larges,
+
+(orientation: portrait) → pour détecter un téléphone tenu verticalement.
+
+🧱 Étape 3 – Application à ton site
+
+Dans ton fichier garage.css, ajoute à la fin :
+
+/* ============================= */
+/*        MODE TABLETTE          */
+/* ============================= */
+@media (max-width: 1024px) {
+  .garage-container {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .voiture {
+    width: 45%; /* deux cartes par ligne */
+  }
+}
+
+/* ============================= */
+/*        MODE MOBILE            */
+/* ============================= */
+@media (max-width: 600px) {
+  .garage-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .voiture {
+    width: 90%;   /* une carte par ligne */
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+
+👉 Résultat attendu :
+
+Sur PC : 3 cartes côte à côte.
+
+Sur tablette : 2 cartes par ligne.
+
+Sur mobile : 1 carte par ligne, tout centré.
+Ton menu de navigation passe aussi en colonne, plus lisible sur petit écran.
+
+💡 Étape 4 – Astuces pratiques
+
+Tester facilement :
+Ouvre ton site dans Chrome, fais clic droit → Inspecter → icône mobile 📱 → choisis différentes largeurs.
+
+Utiliser des unités relatives :
+
+% ou vw (viewport width) pour les largeurs,
+
+em ou rem pour les polices, afin qu’elles s’adaptent.
+
+Images fluides :
+Tu l’as déjà fait avec max-width: 100%; height: auto; — excellent réflexe.
+
+🧠 Étape 5 – Petit défi pratique
+
+Essaie d’ajouter une barre de navigation mobile simple :
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #111;
+    padding: 10px;
+  }
+}
+
+
+Et vérifie que ton menu reste agréable sur un smartphone.
+
+🔧 En résumé
+
+✅ Tu sais maintenant faire un site flexible et adaptable.
+✅ Tu maîtrises les media queries, cœur du responsive design.
+=======
+🎯 Objectif du jour
+
+Comprendre ce qu’est le responsive design.
+
+Découvrir les media queries.
+
+Apprendre à adapter la mise en page et la taille des éléments selon la largeur de l’écran.
+
+Préparer ton site à être consulté depuis n’importe quel appareil.
+
+🧩 Étape 1 – Qu’est-ce que le design responsive ?
+
+Un site responsive adapte automatiquement son affichage à l’espace disponible.
+Sans responsive : ton site est figé, tout devient minuscule sur mobile.
+Avec responsive : les éléments se réorganisent, les textes restent lisibles, les images se redimensionnent.
+
+La clé ? Les media queries, qui permettent de dire au navigateur :
+
+“Quand la largeur de l’écran est inférieure à X pixels, applique ces nouveaux styles.”
+
+⚙️ Étape 2 – Les media queries : la base
+
+La syntaxe générale :
+
+@media (max-width: 768px) {
+  /* Styles appliqués uniquement
+     quand la largeur de l’écran ≤ 768px */
+}
+
+
+On peut aussi utiliser :
+
+(min-width: 1024px) → pour les écrans larges,
+
+(orientation: portrait) → pour détecter un téléphone tenu verticalement.
+
+🧱 Étape 3 – Application à ton site
+
+Dans ton fichier garage.css, ajoute à la fin :
+
+/* ============================= */
+/*        MODE TABLETTE          */
+/* ============================= */
+@media (max-width: 1024px) {
+  .garage-container {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .voiture {
+    width: 45%; /* deux cartes par ligne */
+  }
+}
+
+/* ============================= */
+/*        MODE MOBILE            */
+/* ============================= */
+@media (max-width: 600px) {
+  .garage-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .voiture {
+    width: 90%;   /* une carte par ligne */
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+
+👉 Résultat attendu :
+
+Sur PC : 3 cartes côte à côte.
+
+Sur tablette : 2 cartes par ligne.
+
+Sur mobile : 1 carte par ligne, tout centré.
+Ton menu de navigation passe aussi en colonne, plus lisible sur petit écran.
+
+💡 Étape 4 – Astuces pratiques
+
+Tester facilement :
+Ouvre ton site dans Chrome, fais clic droit → Inspecter → icône mobile 📱 → choisis différentes largeurs.
+
+Utiliser des unités relatives :
+
+% ou vw (viewport width) pour les largeurs,
+
+em ou rem pour les polices, afin qu’elles s’adaptent.
+
+Images fluides :
+Tu l’as déjà fait avec max-width: 100%; height: auto; — excellent réflexe.
+
+🧠 Étape 5 – Petit défi pratique
+
+Essaie d’ajouter une barre de navigation mobile simple :
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #111;
+    padding: 10px;
+  }
+}
+
+
+Et vérifie que ton menu reste agréable sur un smartphone.
+
+🔧 En résumé
+
+✅ Tu sais maintenant faire un site flexible et adaptable.
+✅ Tu maîtrises les media queries, cœur du responsive design.
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+✅ Ton “Garage Virtuel” est officiellement prêt à rouler sur tous les écrans.

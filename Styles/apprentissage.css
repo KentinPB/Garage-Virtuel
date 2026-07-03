@@ -1,0 +1,335 @@
+/* ============================================ */
+/* APPRENTISSAGE PAGE - Learning & Demo       */
+/* ============================================ */
+
+/* ============================================ */
+/* PAGE LAYOUT                                */
+/* ============================================ */
+
+main {
+  padding: 40px 20px;
+}
+
+.section-learning {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #1b1b1b 0%, #252525 100%);
+  border-radius: 12px;
+  border-left: 4px solid #e63946;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ============================================ */
+/* TITRES & TEXTES                            */
+/* ============================================ */
+
+.Titre {
+  font-size: 2em;
+  text-align: center;
+  color: #e63946;
+  font-weight: 700;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.section-learning h2 {
+  color: #f0f0f0;
+  text-align: left;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+.section-learning p {
+  color: #d0d0d0;
+  line-height: 1.8;
+}
+
+/* ============================================ */
+/* IMAGES & MEDIA                             */
+/* ============================================ */
+
+img.Centered {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+img.Centered:hover {
+  transform: scale(1.02);
+}
+
+/* ============================================ */
+/* FICHE TECHNIQUE CARDS                      */
+/* ============================================ */
+
+.Fiche_Link {
+  display: block;
+  width: fit-content;
+  margin: 25px auto;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.Fiche_Link:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.Fiche {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  list-style: none;
+  max-width: 500px;
+}
+
+.Fiche_Link:hover .Fiche {
+  border-color: #e63946;
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.2);
+}
+
+.Fiche .Titre {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0 0 15px 0;
+  color: #e63946;
+}
+
+.Fiche li {
+  color: #d0d0d0;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.Fiche li strong {
+  color: #f0f0f0;
+  font-weight: 700;
+}
+
+.Fiche_Tech {
+  list-style: none;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: fit-content;
+  margin: 20px auto;
+  transition: all 0.3s ease;
+}
+
+.Fiche_Tech:hover {
+  border-color: #e63946;
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.2);
+}
+
+/* ============================================ */
+/* PROJETS CONTAINER                          */
+/* ============================================ */
+
+.Projets_Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+article {
+  background: linear-gradient(135deg, #1f1f1f 0%, #252525 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(230, 57, 70, 0.15);
+  border-color: #e63946;
+}
+
+article h3 {
+  padding: 20px 20px 0 20px;
+  margin: 0;
+  color: #e63946;
+  font-size: 1.3em;
+}
+
+article p {
+  padding: 15px 20px 20px 20px;
+  margin: 0;
+  color: #d0d0d0;
+}
+
+/* ============================================ */
+/* VROOM VROOM BUTTON                         */
+/* ============================================ */
+
+#vroom-button, button[id*="vroom"], main > button {
+  display: block;
+  margin: 30px auto;
+  padding: 14px 30px;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+#vroom-button:hover, 
+button[id*="vroom"]:hover,
+main > button:hover {
+  background-color: #d62828;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(230, 57, 70, 0.4);
+}
+
+#vroom-button:active,
+button[id*="vroom"]:active,
+main > button:active {
+  transform: translateY(0);
+}
+
+/* ============================================ */
+/* ANIMATION CLASSE BOUGER                    */
+/* ============================================ */
+
+.bouger {
+  animation: moveCar 2s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.6);
+}
+
+@keyframes moveCar {
+  0%, 100% {
+    transform: scale(1.05) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-10px);
+  }
+}
+
+/* ============================================ */
+/* INTERACTIVE ELEMENTS                       */
+/* ============================================ */
+
+.garage-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.image-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.voiture:hover .image-container img {
+  transform: scale(1.05);
+}
+
+/* ============================================ */
+/* RESPONSIVE                                 */
+/* ============================================ */
+
+@media (max-width: 1024px) {
+  .Projets_Container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .section-learning {
+    padding: 25px;
+  }
+
+  .Titre {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 25px 15px;
+  }
+
+  .section-learning {
+    padding: 20px 20px;
+    margin-bottom: 25px;
+    border-left-width: 3px;
+  }
+
+  .Projets_Container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .Titre {
+    font-size: 1.4em;
+  }
+
+  article h3 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  .section-learning {
+    padding: 15px 15px;
+    margin-bottom: 20px;
+  }
+
+  .Projets_Container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .Titre {
+    font-size: 1.2em;
+    margin: 15px 0;
+  }
+
+  .Fiche {
+    max-width: 100%;
+  }
+
+  #vroom-button,
+  button[id*="vroom"],
+  main > button {
+    width: calc(100% - 20px);
+    padding: 12px 15px;
+    margin: 20px 10px;
+    font-size: 0.95em;
+  }
+
+  .garage-container {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+}

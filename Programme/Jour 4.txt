@@ -1,0 +1,336 @@
+<<<<<<< HEAD
+🎯 Objectif du jour
+
+Comprendre la logique Flexbox : conteneur et éléments flexibles.
+
+Apprendre à aligner et répartir les blocs horizontalement et verticalement.
+
+Créer une mise en page en colonnes et en cartes.
+
+Préparer la base pour le responsive design (adaptation mobile).
+
+🧩 Étape 1 – L’idée de base de Flexbox
+
+Flexbox (Flexible Box Layout) est un système qui gère l’espace et l’alignement entre les éléments d’un conteneur.
+
+Tu as déjà utilisé :
+
+display: flex;
+justify-content: center;
+gap: 70px;
+
+
+Eh bien, ça, c’était le tout début de Flexbox.
+
+L’idée clé :
+
+Le conteneur flex (parent) contrôle l’agencement.
+
+Les éléments flexibles (enfants) s’ajustent automatiquement.
+
+⚙️ Étape 2 – Les propriétés essentielles
+1. display: flex;
+
+Active le mode flex sur le conteneur.
+
+2. flex-direction
+
+Définit la direction des éléments :
+
+flex-direction: row; /* (par défaut) alignés horizontalement */
+flex-direction: column; /* empilés verticalement */
+
+3. justify-content
+
+Gère l’alignement horizontal (axe principal) :
+
+flex-start → collés à gauche
+
+center → centrés
+
+space-between → espace égal entre les éléments
+
+space-around → espace égal autour de chaque élément
+
+4. align-items
+
+Gère l’alignement vertical (axe secondaire) :
+
+flex-start → en haut
+
+center → centrés
+
+flex-end → en bas
+
+5. flex-wrap
+
+Permet le retour à la ligne automatique :
+
+flex-wrap: wrap;
+
+
+→ Si l’écran est trop petit, les éléments passent à la ligne suivante.
+
+6. gap
+
+Crée un espacement uniforme entre les éléments (tu l’utilises déjà très bien).
+
+🧱 Étape 3 – Mise en pratique
+
+Crée un fichier nommé garage.css dans ton dossier styles/ (tu le lieras à projets.html).
+
+Puis, ajoute ceci :
+
+/* Conteneur principal */
+.garage-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Chaque "carte" de voiture */
+.voiture {
+  background-color: #252525;
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.voiture:hover {
+  transform: scale(1.03);
+}
+
+/* Image dans la carte */
+.voiture img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.voiture h3 {
+  text-align: center;
+  color: #e63946;
+}
+
+.voiture p {
+  text-align: justify;
+  font-size: 14px;
+}
+
+📄 Étape 4 – Modifier projets.html
+
+Ajoute ce bloc dans ton <main> (à la place de la section actuelle) :
+
+<main>
+  <h2>Mes projets</h2>
+  <div class="garage-container">
+    <div class="voiture">
+      <img src="https://static.wixstatic.com/media/f2b0f7_72c742d0862946f98ffc9038a69b4074~mv2.jpg/v1/fill/w_824,h_548,q_85/f2b0f7_b2841c7f76944d62a09de0038e3cb024~mv2.jpg" alt="Mazda RX-7 FD3S blanche">
+      <h3>RX-7 FD3S</h3>
+      <p>Moteur rotatif 1.3L bi-rotor – 276 ch. Design intemporel, équilibré, symbole du plaisir de conduite japonais.</p>
+    </div>
+
+    <div class="voiture">
+      <img src="https://cdn.motor1.com/images/mgl/jWmWe/s1/2018-mazda-mx-5-miata.jpg" alt="Mazda MX-5 ND rouge">
+      <h3>MX-5 ND</h3>
+      <p>Petit roadster léger et agile. Un équilibre parfait entre modernité et héritage automobile.</p>
+    </div>
+
+    <div class="voiture">
+      <img src="https://cdn.motor1.com/images/mgl/9gW6x/s1/toyota-supra.jpg" alt="Toyota Supra MK4">
+      <h3>Toyota Supra MK4</h3>
+      <p>Légende japonaise propulsée par le mythique moteur 2JZ-GTE, référence de puissance et de tuning.</p>
+    </div>
+  </div>
+</main>
+
+
+Lien ton garage.css dans le <head> de projets.html :
+
+<link rel="stylesheet" href="styles/garage.css">
+
+🚗 Étape 5 – Résultat attendu
+
+Tu obtiendras une galerie de voitures en cartes :
+
+Alignées côte à côte,
+
+Qui se recentrent automatiquement selon la largeur de l’écran,
+
+Avec un petit effet de zoom au survol.
+
+=======
+🎯 Objectif du jour
+
+Comprendre la logique Flexbox : conteneur et éléments flexibles.
+
+Apprendre à aligner et répartir les blocs horizontalement et verticalement.
+
+Créer une mise en page en colonnes et en cartes.
+
+Préparer la base pour le responsive design (adaptation mobile).
+
+🧩 Étape 1 – L’idée de base de Flexbox
+
+Flexbox (Flexible Box Layout) est un système qui gère l’espace et l’alignement entre les éléments d’un conteneur.
+
+Tu as déjà utilisé :
+
+display: flex;
+justify-content: center;
+gap: 70px;
+
+
+Eh bien, ça, c’était le tout début de Flexbox.
+
+L’idée clé :
+
+Le conteneur flex (parent) contrôle l’agencement.
+
+Les éléments flexibles (enfants) s’ajustent automatiquement.
+
+⚙️ Étape 2 – Les propriétés essentielles
+1. display: flex;
+
+Active le mode flex sur le conteneur.
+
+2. flex-direction
+
+Définit la direction des éléments :
+
+flex-direction: row; /* (par défaut) alignés horizontalement */
+flex-direction: column; /* empilés verticalement */
+
+3. justify-content
+
+Gère l’alignement horizontal (axe principal) :
+
+flex-start → collés à gauche
+
+center → centrés
+
+space-between → espace égal entre les éléments
+
+space-around → espace égal autour de chaque élément
+
+4. align-items
+
+Gère l’alignement vertical (axe secondaire) :
+
+flex-start → en haut
+
+center → centrés
+
+flex-end → en bas
+
+5. flex-wrap
+
+Permet le retour à la ligne automatique :
+
+flex-wrap: wrap;
+
+
+→ Si l’écran est trop petit, les éléments passent à la ligne suivante.
+
+6. gap
+
+Crée un espacement uniforme entre les éléments (tu l’utilises déjà très bien).
+
+🧱 Étape 3 – Mise en pratique
+
+Crée un fichier nommé garage.css dans ton dossier styles/ (tu le lieras à projets.html).
+
+Puis, ajoute ceci :
+
+/* Conteneur principal */
+.garage-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Chaque "carte" de voiture */
+.voiture {
+  background-color: #252525;
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.voiture:hover {
+  transform: scale(1.03);
+}
+
+/* Image dans la carte */
+.voiture img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.voiture h3 {
+  text-align: center;
+  color: #e63946;
+}
+
+.voiture p {
+  text-align: justify;
+  font-size: 14px;
+}
+
+📄 Étape 4 – Modifier projets.html
+
+Ajoute ce bloc dans ton <main> (à la place de la section actuelle) :
+
+<main>
+  <h2>Mes projets</h2>
+  <div class="garage-container">
+    <div class="voiture">
+      <img src="https://static.wixstatic.com/media/f2b0f7_72c742d0862946f98ffc9038a69b4074~mv2.jpg/v1/fill/w_824,h_548,q_85/f2b0f7_b2841c7f76944d62a09de0038e3cb024~mv2.jpg" alt="Mazda RX-7 FD3S blanche">
+      <h3>RX-7 FD3S</h3>
+      <p>Moteur rotatif 1.3L bi-rotor – 276 ch. Design intemporel, équilibré, symbole du plaisir de conduite japonais.</p>
+    </div>
+
+    <div class="voiture">
+      <img src="https://cdn.motor1.com/images/mgl/jWmWe/s1/2018-mazda-mx-5-miata.jpg" alt="Mazda MX-5 ND rouge">
+      <h3>MX-5 ND</h3>
+      <p>Petit roadster léger et agile. Un équilibre parfait entre modernité et héritage automobile.</p>
+    </div>
+
+    <div class="voiture">
+      <img src="https://cdn.motor1.com/images/mgl/9gW6x/s1/toyota-supra.jpg" alt="Toyota Supra MK4">
+      <h3>Toyota Supra MK4</h3>
+      <p>Légende japonaise propulsée par le mythique moteur 2JZ-GTE, référence de puissance et de tuning.</p>
+    </div>
+  </div>
+</main>
+
+
+Lien ton garage.css dans le <head> de projets.html :
+
+<link rel="stylesheet" href="styles/garage.css">
+
+🚗 Étape 5 – Résultat attendu
+
+Tu obtiendras une galerie de voitures en cartes :
+
+Alignées côte à côte,
+
+Qui se recentrent automatiquement selon la largeur de l’écran,
+
+Avec un petit effet de zoom au survol.
+
+>>>>>>> 001547142dd96d697801c594ae5d485f55541541
+Une base parfaite pour ta “section projets” du garage virtuel.

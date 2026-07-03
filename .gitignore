@@ -1,0 +1,106 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+
+# Editor
+.vscode/
+.idea/
+
+# Build
+dist/
+build/
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+# .gitignore - Garage Virtuel
+
+# ============================================================================
+# Fichiers systèmes
+# ============================================================================
+.DS_Store                    # macOS
+Thumbs.db                    # Windows
+.Thumbs.db
+*.swp                        # Vi/Vim
+*.swo
+*~
+.idea/                       # IDE files
+.vscode/
+*.sublime-*
+.netrc
+
+# ============================================================================
+# Environnement et dépendances
+# ============================================================================
+node_modules/               # Node.js packages (si jamais utilisé)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env                        # Variables d'environnement
+.env.local
+.env.*.local
+
+# ============================================================================
+# Build et output
+# ============================================================================
+dist/
+build/
+*.min.js
+*.min.css
+*.bundle.js
+
+# ============================================================================
+# IDE et éditeur
+# ============================================================================
+.vscode/settings.json       # Settings personnels VS Code
+.vscode/launch.json
+*.code-workspace
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================================
+# Logs
+# ============================================================================
+*.log
+logs/
+error.log
+debug.log
+
+# ============================================================================
+# OS spécifiques
+# ============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# ============================================================================
+# Fichiers temporaires de développement
+# ============================================================================
+*.tmp
+*.temp
+.cache/
+temp/
+
+# ============================================================================
+# Backups
+# ============================================================================
+*.bak
+*.backup
+*~
+*.swp
