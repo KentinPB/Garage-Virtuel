@@ -366,7 +366,7 @@ Objectif : Transformer en réseau social pour passionnés.
 - 👁️ **Suivi des garages** :
   - S'abonner aux collections d'autres utilisateurs
   - Notifications quand un suivi ajoute une voiture
-  - Fil d'actualité personalisé
+  - Fil d'actualité personnalisé
 
 - 💬 **Système de commentaires** :
   - Commenter sur les véhicules
